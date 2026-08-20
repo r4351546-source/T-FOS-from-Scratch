@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.20)
+project(my_project CXX)
+
+# Фіксуємо C++20 (або став 17/23 за потребою)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Збираємо всі .cpp файли з папки src/
+file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
+
+# Створюємо виконуваний файл
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Вказуємо компілятору шукати хедери в теці include/ відносно кореня проєкту
+target_include_directories(${PROJECT_NAME} 
+    PRIVATE 
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
