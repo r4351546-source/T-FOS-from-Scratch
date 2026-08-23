@@ -12,7 +12,7 @@ cin >> *targetName;
 folders* newFolder = new folders{*targetName, curent};
 curent->children[*targetName] = newFolder;
 cout << "folder created" << endl;
-delete &targetName;
+delete targetName;
 }
 
 void commands::list_folder() {
@@ -47,7 +47,7 @@ void commands::move_to_folder() {
         curent = curent->children[*the_target];
 
     }
-delete &the_target;
+delete the_target;
 }
 void commands::curent_folder() {
 cout << "curent folder: " << curent << endl;
