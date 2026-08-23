@@ -7,10 +7,10 @@ using namespace std;
 
 
 void commands::create_folder() {
-string targetName;
-cin >> targetName;
-folders* newFolder = new folders{targetName, curent};
-curent->children[targetName] = newFolder;
+string *targetName = new string;
+cin >> *targetName;
+folders* newFolder = new folders{*targetName, curent};
+curent->children[*targetName] = newFolder;
 cout << "folder created" << endl;
 delete &targetName;
 }
@@ -24,14 +24,15 @@ void commands::list_folder() {
             cout << thenum << "." << name << "<--" << endl;
             thenum++;
         }
+        thenum = 1;
     }
 
 }
 
 void commands::move_to_folder() {
-    string the_target;
-    cin >> the_target;
-    if(the_target == "-") {
+    string* the_target = new string;
+    cin >> *the_target;
+    if(*the_target == "-") {
         if(curent->parent != nullptr) {
             curent = curent->parent;
         }
@@ -39,15 +40,18 @@ void commands::move_to_folder() {
             cout << "you are in the main root!" << endl;
         }
     }
-    else if(curent->children.count(the_target)) {
-        while(!curent->children[the_target]) {
+    else if(curent->children.count(*the_target)) {
+        while(!curent->children[*the_target]) {
             cout << "[ERROR]:the folder does not exist" << endl;
         }
-        curent = curent->children[the_target];
-
+        curent = curent->children[*the_target];
 
     }
-
+delete &the_target;
 }
+void commands::curent_folder() {
+cout << "curent folder: " << curent << endl;
+}
+
 
 
