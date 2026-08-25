@@ -26,6 +26,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "lsc";
             move_folder = "cds";
             curent_folder = "crt";
+            break;
         }
         else if(syntaks == "linux") {
             cout << "syntaksis '" << syntaks << "' enable now" << endl;
@@ -34,6 +35,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "ls";
             move_folder = "cd";
             curent_folder = "pwd";
+            break;
         }
         else if(syntaks == "klike") {
             cout << "syntaksis '" << syntaks << "' enable now" << endl;
@@ -42,6 +44,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "ldc";
             move_folder = "cps";
             curent_folder = "scr";
+            break;
         }
         else {cout << "[ERROR]: incorrect service" << endl;}
     }

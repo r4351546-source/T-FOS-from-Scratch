@@ -1,10 +1,10 @@
 #pragma once
 #include <string>
-std::string login;
-std::string password;
-std::string check_password;
-class registr {
-    public:
+inline std::string login = "user";
+inline std::string password;
+inline std::string check_password;
+struct registr {
+
         void user_add();
         void rename();
 };

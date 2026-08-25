@@ -18,5 +18,5 @@ struct folders {
         folders* parent = nullptr;
         std::map<std::string, folders*> children;
 };
-folders root{"/", nullptr};
-folders* curent = &root;
+inline folders root{"/", nullptr};
+inline folders* curent = &root;

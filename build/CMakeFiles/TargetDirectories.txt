@@ -1,0 +1,3 @@
+/home/linuxsoid/T-FOS_from_scratch/build/CMakeFiles/t-fos.dir
+/home/linuxsoid/T-FOS_from_scratch/build/CMakeFiles/edit_cache.dir
+/home/linuxsoid/T-FOS_from_scratch/build/CMakeFiles/rebuild_cache.dir

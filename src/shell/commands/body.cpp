@@ -41,13 +41,15 @@ void commands::move_to_folder() {
         }
     }
     else if(curent->children.count(*the_target)) {
-        while(!curent->children[*the_target]) {
+        if(!curent->children[*the_target]) {
             cout << "[ERROR]:the folder does not exist" << endl;
         }
+        else {
         curent = curent->children[*the_target];
-
+        }
     }
 delete the_target;
+
 }
 void commands::curent_folder() {
 cout << "curent folder: " << curent << endl;

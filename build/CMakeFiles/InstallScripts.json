@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/linuxsoid/T-FOS_from_scratch/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -5,7 +5,7 @@
 
 void hlp::help() {
     //start
-cout << "->help." << endl;
+cout << "->help menu" << endl << endl << endl;
 //filesystem help
 cout << "1.filesystem navigation->>" << endl;
 cout << "for the create folder type: " << create_folder << " name" << endl;
@@ -23,5 +23,11 @@ cout << "for see your name type: whoami -u" << endl;
 cout << "for see your syntax type: whoami -s" << endl;
 //src/tools/
 cout << "4.tools->>" << endl;
-cout << "for see custom fetch type: niofh" << endl;
+cout << "for see custom fetch type: niofh" << endl << endl;
+//customize
+cout << "5.customize->>" << endl;
+cout << "for choose shell type: sh-mode" << endl;
+cout << "for choose your syntax type: sx-mode" << endl;
+
+
 }

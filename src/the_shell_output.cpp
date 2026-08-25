@@ -10,8 +10,11 @@ void out::output(std::string the_sh) {
     
     if(out1 == "terminal@root~r-fos>" || out1 == ">" || out1 == "t-fos->" || out1 == "t-fos@root~/") {
         the_sh = out1;
+        the_sh = the_she;
     }
     else {
     the_sh = out2 + out1;
+    the_sh = the_she;
     }
+    the_she = the_sh;
 }

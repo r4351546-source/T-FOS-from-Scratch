@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
-std::string sh_name;
-std::string the_shell;
-class shell {
+inline std::string sh_name = "";
+inline std::string the_shell = "";
+struct shell {
 
 void input();
 void the_divius();
