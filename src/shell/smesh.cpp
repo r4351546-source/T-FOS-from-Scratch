@@ -9,6 +9,7 @@
 using namespace std;
 
 void shell::smesh() {
+    sh_name = "smesh";
 the_shell = "t-fos->";
 cout << "search packet..." << endl;
 this_thread::sleep_for(chrono::seconds(5));

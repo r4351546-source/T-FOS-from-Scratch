@@ -13,6 +13,7 @@ using namespace std;
 //func wesh shell
 void shell::wesh() {
     //func start
+    sh_name = "wesh";
 the_shell = "terminal@root~t-fos>";
 cout << "search packet..." << endl;
 

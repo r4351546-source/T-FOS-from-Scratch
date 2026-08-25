@@ -7,6 +7,7 @@
 using namespace std;
 
 void shell::chsares() {
+    sh_name = "chsares";
 the_shell = "@main/shell/chsares-h#->";
 cout << "search packet 'chsares-h'..." << endl;
 this_thread::sleep_for(chrono::seconds(3));

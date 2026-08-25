@@ -9,6 +9,7 @@
 using namespace std;
 
 void shell::basic() {
+    sh_name = "basic";
 the_shell = ">";
 cout << "search packet..." << endl;
 this_thread::sleep_for(chrono::seconds(1));

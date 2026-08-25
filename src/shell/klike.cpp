@@ -7,7 +7,7 @@
 using namespace std;
 
 void shell::klike() {
-
+sh_name = "klike";
 the_shell = "t-fos@root~/";
 cout << "search packet..." << endl;
 

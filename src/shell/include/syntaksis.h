@@ -1,12 +1,15 @@
 #pragma once
 #include <string>
 using namespace std;
+string sx_name;
+string create_folder = "folcr";
+    string move_folder = "cds";
+    string list_folder = "lsc";
+    string curent_folder = "crt";
+
 
 class syntaksis {
-    string create_folder;
-    string move_folder;
-    string list_folder;
-void syntaksis_func();
+    void syntaksis_func();
 
 
 };
