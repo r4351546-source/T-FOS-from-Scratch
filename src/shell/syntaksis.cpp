@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "include/syntaksis.h"
+#include <fstream>
 
 using namespace std;
 
@@ -26,6 +27,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "lsc";
             move_folder = "cds";
             curent_folder = "crt";
+            save();
             break;
         }
         else if(syntaks == "linux") {
@@ -35,6 +37,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "ls";
             move_folder = "cd";
             curent_folder = "pwd";
+            save();
             break;
         }
         else if(syntaks == "klike") {
@@ -44,6 +47,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "ldc";
             move_folder = "cps";
             curent_folder = "scr";
+            save();
             break;
         }
         else {cout << "[ERROR]: incorrect service" << endl;}

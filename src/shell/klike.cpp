@@ -13,5 +13,6 @@ cout << "search packet..." << endl;
 
 this_thread::sleep_for(chrono::seconds(6));
 cout << "sucees! packet download" << endl;
+save();
 
 }

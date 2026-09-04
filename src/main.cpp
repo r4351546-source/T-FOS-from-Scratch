@@ -95,6 +95,10 @@ else if(input == list_folder) {fs.list_folder();}
 
 //move folder
 else if(input == move_folder) {fs.move_to_folder();}
+
+//hex folder address
+else if(input == curent_folder + "$") {fs.folder_hex();}
+
 //-----------------
 //end of filesystem
 //-----------------

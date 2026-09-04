@@ -14,4 +14,5 @@ the_shell = "t-fos->";
 cout << "search packet..." << endl;
 this_thread::sleep_for(chrono::seconds(5));
 cout << "sucees! packet download" << endl;
+save();
 }

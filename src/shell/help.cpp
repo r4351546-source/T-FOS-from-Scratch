@@ -11,7 +11,8 @@ cout << "1.filesystem navigation->>" << endl;
 cout << "for the create folder type: " << create_folder << " name" << endl;
 cout << "for the move to folder type: " << move_folder << " name" << endl;
 cout << "for the see all in folder type: " << list_folder << endl;
-cout << "for the see curent folder type:" << curent_folder << endl << endl;
+cout << "for the see curent folder type:" << curent_folder << endl;
+cout << "for the see folder address type: " << curent_folder << "$" << endl << endl;
 //account help
 cout << "2.account->>" << endl;
 cout << "for create account type: reg" << endl;
