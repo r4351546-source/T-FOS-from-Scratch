@@ -6,13 +6,18 @@
 //1.folder shell
 #include "shell/include/shell.hpp"
 #include "shell/include/help.hpp"
-#include "shell/include/syntaksis.h"
 
-//2. shell/commahds
-#include "shell/commands/include/body.h"
+//2.filesystem
+#include "filesystem/include/body.h"
 
-//3.src/
-#include "whoami.hpp"
+//whoami
+#include "whoami/whoami.hpp"
+
+//syntax
+#include "syntax/include/syntaksis.h"
+
+
+//3.src
 #include "the_shell_output.hpp"
 
 //4.registration/
@@ -36,6 +41,8 @@ int realize::program() {
     //strings
 string input;
 string version = "0.1(realize)";
+
+realize sounds;
 //start
 
 //1 os name
@@ -48,7 +55,7 @@ std::this_thread::sleep_for(std::chrono::milliseconds(750));
 
 //3, arcitecture
 std::cout << "create with C++ and module architecture" << std::endl;
-int startSound = system("paplay assets/sounds/start.oga");
+sounds.realize::StartSound;
 
 //struct obj creating
 //1.help
@@ -127,6 +134,7 @@ else if(input == "renam_acc") {user.rename();}
 
 //exit
 else if(input == "ex0") {
+    sounds.realize::EndSound;
 cout << "shutdown t-fos from scratch..." << endl;
 break;
 }
