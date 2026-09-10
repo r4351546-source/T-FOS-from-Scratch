@@ -8,7 +8,7 @@
 #include "shell/include/help.hpp"
 
 //2.filesystem
-#include "filesystem/include/body.h"
+#include "filesystem/include/funcs.hpp"
 
 //whoami
 #include "whoami/whoami.hpp"
@@ -57,6 +57,7 @@ std::cout << "create with C++ and module architecture" << std::endl;
 std::cout << "dev linuxsoid" << std::endl;
 std::cout << "simple terminal emulator" << std::endl;
 std::cout << "type \"help\" for a list of commands" << std::endl;
+std::cout << "this is not really os! im not saying this" << std::endl;
 
 
 //struct obj creating

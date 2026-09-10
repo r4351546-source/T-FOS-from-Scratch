@@ -2,11 +2,11 @@
 #pragma once
 
 //main header
-#include "main.hpp"
+#include "bodies.hpp"
 
 //namespace for sounds
 namespace sounds {
-    realize sound;
+    used_sounds sound;
     //start and shutdown functions sounds
     int start();
     int shutdown();

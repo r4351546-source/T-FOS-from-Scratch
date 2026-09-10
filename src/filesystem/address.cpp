@@ -1,4 +1,5 @@
-#include "include/body.h"
+#include "include/body.hpp"
+#include "include/funcs.hpp"
 #include <iostream>
 
 using std::endl;
