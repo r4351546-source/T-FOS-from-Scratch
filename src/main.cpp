@@ -16,6 +16,8 @@
 //syntax
 #include "syntax/include/syntaksis.h"
 
+//sounds
+#include "sounds/include/sounds.hpp"
 
 //3.src
 #include "the_shell_output.hpp"
@@ -40,22 +42,22 @@ using std::string;
 int realize::program() {
     //strings
 string input;
-string version = "0.1(realize)";
+string version = "0.1";
 
-realize sounds;
 //start
 
+//start sound
+sounds::start();
 //1 os name
 std::cout << "t-fos from scratch" << std::endl;
-std::this_thread::sleep_for(std::chrono::seconds(1));
-
 //2, version status
 std::cout << "version: " << version << std::endl;
-std::this_thread::sleep_for(std::chrono::milliseconds(750));
-
 //3, arcitecture
 std::cout << "create with C++ and module architecture" << std::endl;
-sounds.realize::StartSound;
+std::cout << "dev linuxsoid" << std::endl;
+std::cout << "simple terminal emulator" << std::endl;
+std::cout << "type \"help\" for a list of commands" << std::endl;
+
 
 //struct obj creating
 //1.help
@@ -134,13 +136,16 @@ else if(input == "renam_acc") {user.rename();}
 
 //exit
 else if(input == "ex0") {
-    sounds.realize::EndSound;
-cout << "shutdown t-fos from scratch..." << endl;
-break;
+    sounds::shutdown();
+    std::cout << "shutdown t-fos from scratch..." << std::endl;
+    break;
 }
 
 //errors
-else {cout << "[ERROR]:command '" << input << "' type help for see commands" << endl;}
+else {
+    sounds::done();
+    std::cout << "[ERROR]:command '" << input << "' type help for see commands" << std::endl;
+}
 
 //ending
 }
