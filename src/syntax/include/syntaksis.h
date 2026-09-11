@@ -2,12 +2,12 @@
 #include <string>
 #include <fstream>
 
-using namespace std;
-inline string sx_name = "divius";
-inline string create_folder = "folcr";
-inline string move_folder = "cds";
-inline string list_folder = "lsc";
-inline string curent_folder = "crt";
+
+inline std::string sx_name = "divius";
+inline std::string create_folder = "folcr";
+inline std::string move_folder = "cds";
+inline std::string list_folder = "lsc";
+inline std::string curent_folder = "crt";
 
 extern std::ofstream syntax("syntax.json");
 

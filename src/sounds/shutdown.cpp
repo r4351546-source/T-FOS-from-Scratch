@@ -1,5 +1,5 @@
 #include "include/sounds.hpp"
-#include "main.hpp"
+#include "include/bodies.hpp"
 
 int sounds::shutdown() {
     return sound.EndSound;

@@ -3,9 +3,8 @@
 #include "main.hpp"
 //other libs
 
-//1.folder shell
+//1.shell
 #include "shell/include/shell.hpp"
-#include "shell/include/help.hpp"
 
 //2.filesystem
 #include "filesystem/include/funcs.hpp"
@@ -26,7 +25,13 @@
 #include "registration/include/registration.hpp"
 
 //5.tools
+
+//nio
 #include "tools/include/nio.hpp"
+//help
+#include "tools/include/help.hpp"
+//outText
+#include "tools/include/outText.hpp"
 
 //other libs
 #include <iostream>
@@ -79,6 +84,7 @@ niofetch niofetch;
 syntaksis stx;
 
 
+std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 //start while
 while(true) {
 //input start
@@ -134,6 +140,9 @@ else if(input == "renam_acc") {user.rename();}
 //---------------
 //end of user settings
 //---------------
+
+//outText
+else if(input == outText::command) {outText::textout();}
 
 //exit
 else if(input == "ex0") {

@@ -16,5 +16,6 @@ cout << "password don't correct, try again: ";
 cin >> check_password;
 }
 cout << "user " << login << " added" << endl;
+save();
 
 } 

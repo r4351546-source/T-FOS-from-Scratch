@@ -15,4 +15,5 @@ cin >> check_password;
 cout << "enter new login" << endl;
 cout << ">> ";
 cin >> login;
+save();
 } 

@@ -1,7 +1,9 @@
 #include "include/help.hpp"
-#include "include/syntaksis.h"
+#include "syntax/include/syntaksis.h"
 #include <iostream>
 
+using std::cout;
+using std::endl;
 
 void hlp::help() {
     //start
@@ -24,7 +26,8 @@ cout << "for see your name type: whoami -u" << endl;
 cout << "for see your syntax type: whoami -s" << endl;
 //src/tools/
 cout << "4.tools->>" << endl;
-cout << "for see custom fetch type: niofh" << endl << endl;
+cout << "for see custom fetch type: niofh" << endl;
+cout << "for print your text type: out text" << endl << endl;
 //customize
 cout << "5.customize->>" << endl;
 cout << "for choose shell type: sh-mode" << endl;
