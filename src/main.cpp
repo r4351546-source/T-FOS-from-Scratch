@@ -40,7 +40,15 @@
 #include <chrono>
 #include <thread>
 
-
+//color
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define MAGENTA "\033[35m"
+#define CYAN    "\033[36m"
+#define WHITE   "\033[37m"
 
 using std::string;
 
@@ -61,7 +69,7 @@ std::cout << "version: " << version << std::endl;
 std::cout << "create with C++ and module architecture" << std::endl;
 std::cout << "dev linuxsoid" << std::endl;
 std::cout << "simple terminal emulator" << std::endl;
-std::cout << "type \"help\" for a list of commands" << std::endl;
+std::cout << "type" << GREEN << "\"help\"" << RESET << " for a list of commands" << std::endl;
 std::cout << "this is not really os! im not saying this" << std::endl;
 
 
@@ -88,8 +96,8 @@ std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 //start while
 while(true) {
 //input start
-std::cout << sh.the_she << " ";
-std::cin >> input;
+std::cout << sh.the_she;
+std::getline(std::cin, input);
 
 //help
 if(input == "help") {helper.hlp::help();}
@@ -111,6 +119,9 @@ else if(input == list_folder) {fs.list_folder();}
 
 //move folder
 else if(input == move_folder) {fs.move_to_folder();}
+
+//remove folder
+else if(input == remove_folder) {fs.remove();}
 
 //hex folder address
 else if(input == curent_folder + "$") {fs.folder_hex();}
@@ -147,14 +158,14 @@ else if(input == outText::command) {outText::textout();}
 //exit
 else if(input == "ex0") {
     sounds::shutdown();
-    std::cout << "shutdown t-fos from scratch..." << std::endl;
+    std::cout << GREEN << "shutdown t-fos from scratch..." << RESET << std::endl;
     break;
 }
 
 //errors
 else {
     sounds::done();
-    std::cout << "[ERROR]:command '" << input << "' type help for see commands" << std::endl;
+    std::cout << RED << "[ERROR]:command '" << input << "' type help for see commands" << RESET << std::endl;
 }
 
 //ending

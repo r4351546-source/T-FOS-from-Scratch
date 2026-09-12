@@ -27,6 +27,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "lsc";
             move_folder = "cds";
             curent_folder = "crt";
+            remove_folder = "erase";
             save();
             break;
         }
@@ -37,6 +38,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "ls";
             move_folder = "cd";
             curent_folder = "pwd";
+            remove_folder = "rm";
             save();
             break;
         }
@@ -47,6 +49,7 @@ void syntaksis::syntaksis_func() {
             list_folder = "ldc";
             move_folder = "cps";
             curent_folder = "scr";
+            remove_folder = "delq";
             save();
             break;
         }

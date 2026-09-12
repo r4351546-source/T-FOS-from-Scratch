@@ -1,5 +1,7 @@
 #pragma once
 
+#include "registration/include/registration.hpp"
+
 #include <string>
 #include <map>
 
@@ -8,5 +10,5 @@ struct folders {
         folders* parent = nullptr;
         std::map<std::string, folders*> children;
 };
-inline folders root{"/", nullptr};
+inline folders root{"system/" + login + "/", nullptr};
 inline folders* curent = &root;

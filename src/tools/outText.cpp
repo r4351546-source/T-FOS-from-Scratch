@@ -1,5 +1,5 @@
 #include "include/outText.hpp"
-#include "syntaksis.h"
+#include "syntax/include/syntaksis.h"
 
 #include <string>
 #include <iostream>

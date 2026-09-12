@@ -8,6 +8,7 @@ inline std::string create_folder = "folcr";
 inline std::string move_folder = "cds";
 inline std::string list_folder = "lsc";
 inline std::string curent_folder = "crt";
+inline std::string remove_folder = "erase";
 
 extern std::ofstream syntax("syntax.json");
 

@@ -16,6 +16,7 @@ void syntaksis::save() {
     syntax << "\"move_folder\": \"" << move_folder << "\"," << endl;
     syntax << "\"list_folder\": \"" << list_folder << "\"," << endl;
     syntax << "\"curent_folder\": \"" << curent_folder << "\"" << endl;
+    syntax << "\"remove_folder\": \"" << remove_folder << "\"" << endl;
     syntax << "}" << endl;
     syntax.close();
 }
