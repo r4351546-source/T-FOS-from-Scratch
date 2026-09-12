@@ -12,10 +12,12 @@ struct shell {
 
 
 void input();
+
 void the_divius();
 void chsares();
 void wesh();
 void smesh();
 void basic();
 void klike();
+void cmd();
 };

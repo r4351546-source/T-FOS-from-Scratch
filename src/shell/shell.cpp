@@ -18,15 +18,15 @@ string input_log;
     //chsares-h shell
     //2.>>
     cout << "2.for shell chsares-h type 'sp-tf install chsares-h'" << endl;
-    cout << "-.shell: user@main/shell/chsares-h#->" << endl << endl;
+    cout << "-.shell: [user]@command?" << endl << endl;
     //wesh shell
     //3.>>
     cout << "3.for wesh shell type 'sp-tf install wesh-bin.k'" << endl;
-    cout << "-.shell: terminal@root~t-fos>" << endl << endl; 
+    cout << "-.shell: terminal@t-fos>" << endl << endl; 
     //smesh shell
     //4.>>
     cout << "4.for smesh-shell type 'sp-tf install smesh'" << endl;
-    cout << "-.shell: t-fos->" << endl << endl;
+    cout << "-.shell: user@t-fos->" << endl << endl;
     //basic shell
     //5.>>
     cout << "5.for basic shell type 'sp-tf install basic-shell'" << endl;
@@ -34,7 +34,11 @@ string input_log;
     //klike shell
     //6.>>
     cout << "6.for klike-shell type 'sp-tf install klike'" << endl;
-    cout << "-.shell: t-fos@root~/" << endl << endl;
+    cout << "-.shell: t-fos@user~/" << endl << endl;
+    //cmd shell
+    //7.>>
+    cout << "7.for cmd shell type 'sp-tf install cmd'" << endl;
+    cout << "-.shell: system/user/:>" << endl << endl;
     
     //input
     cin >> packet_manager;
@@ -55,6 +59,9 @@ string input_log;
             else if(shell == "basic-shell") {basic();}
             //klike shell
             else if(shell == "klike") {klike();}
+            //cmd
+            else if(shell == "cmd") {cmd();}
+            //error
             else {
                 cout << "[ERROR]" << endl;
             }

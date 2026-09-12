@@ -14,7 +14,7 @@ using namespace std;
 void shell::wesh() {
     //func start
     sh_name = "wesh";
-the_shell = "terminal@root~t-fos>";
+the_shell = "terminal@t-fos>";
 cout << "search packet..." << endl;
 
 this_thread::sleep_for(chrono::seconds(1));
