@@ -14,6 +14,6 @@ void shell::the_divius() {
     cout << "search the packet..." << endl;
     this_thread::sleep_for(chrono::seconds(2));
     cout << "sucees! packet downloads" << endl;
-    save();
+    
 
 }

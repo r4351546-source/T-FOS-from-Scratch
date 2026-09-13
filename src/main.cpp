@@ -3,10 +3,10 @@
 #include "main.hpp"
 //other libs
 
-//1.shell
+//shell
 #include "shell/include/shell.hpp"
 
-//2.filesystem
+//filesystem
 #include "filesystem/include/funcs.hpp"
 
 //whoami
@@ -18,13 +18,10 @@
 //sounds
 #include "sounds/include/sounds.hpp"
 
-//3.src
-#include "the_shell_output.hpp"
-
-//4.registration/
+//registration
 #include "registration/include/registration.hpp"
 
-//5.tools
+//tools
 
 //nio
 #include "tools/include/nio.hpp"
@@ -82,13 +79,11 @@ shell main_sh;
 commands fs;
 //4.whoami
 who whom;
-//5.output shell
-out sh;
-//6.user
+//5.user
 registr user;
-//7.nio
+//6.nio
 niofetch niofetch;
-//8.syntax
+//7.syntax
 syntaksis stx;
 
 
@@ -96,7 +91,7 @@ std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 //start while
 while(true) {
 //input start
-std::cout << sh.the_she;
+std::cout << state::shellout;
 std::getline(std::cin, input);
 
 //help
@@ -160,6 +155,7 @@ else if(input == "ex0") {
     sounds::shutdown();
     std::cout << GREEN << "shutdown t-fos from scratch..." << RESET << std::endl;
     break;
+    return 0;
 }
 
 //errors
@@ -174,6 +170,9 @@ return 0;
 }
 
 int main() {
+
 realize prog;
+
 prog.program();
 }
+

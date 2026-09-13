@@ -19,6 +19,5 @@ cout << "search packet..." << endl;
 
 this_thread::sleep_for(chrono::seconds(1));
 cout << "sucees! packet download" << endl;
-save();
 //end wesh func
 }

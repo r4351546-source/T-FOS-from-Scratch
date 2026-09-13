@@ -1,0 +1,88 @@
+# ===== Build =====
+build/
+Build/
+out/
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# ===== CMake =====
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Makefile
+
+# ===== Visual Studio =====
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+
+# ===== VS Code =====
+.vscode/
+
+# ===== JetBrains / CLion =====
+.idea/
+*.iml
+
+# ===== Code::Blocks =====
+*.cbp
+*.layout
+*.depend
+
+# ===== Qt Creator =====
+*.pro.user
+*.pro.user.*
+.qtc_clangd/
+
+# ===== Eclipse =====
+.project
+.cproject
+.settings/
+
+# ===== Xcode =====
+.xcodeproj/
+.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# ===== Compiled files =====
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+# ===== Debug / profiling =====
+*.dSYM/
+*.pdb
+*.ilk
+*.idb
+*.ipch
+
+# ===== OS garbage =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Temporary files =====
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+*~

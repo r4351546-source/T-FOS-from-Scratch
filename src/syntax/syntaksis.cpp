@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "include/syntaksis.h"
+#include "sounds/include/sounds.hpp"
 #include <fstream>
 
 //colors
@@ -32,7 +33,7 @@ void syntaksis::syntaksis_func() {
             move_folder = "cds";
             curent_folder = "crt";
             remove_folder = "erase";
-            save();
+
             break;
         }
         else if(syntaks == "linux") {
@@ -43,7 +44,7 @@ void syntaksis::syntaksis_func() {
             move_folder = "cd";
             curent_folder = "pwd";
             remove_folder = "rm";
-            save();
+           
             break;
         }
         else if(syntaks == "klike") {
@@ -54,12 +55,17 @@ void syntaksis::syntaksis_func() {
             move_folder = "cps";
             curent_folder = "scr";
             remove_folder = "delq";
-            save();
+            
             break;
         }
-        else {cout << RED << "[ERROR]: incorrect service" << RESET << endl;}
+        else {
+            sounds::done();
+            cout << RED << "[ERROR]: incorrect service" << RESET << endl;
+        }
     }
-    else {cout << RED << "[ERROR]: incorrect command" << RESET << endl;}
+    else {
+        sounds::done();
+        cout<< RED << "[ERROR]: incorrect command" << RESET << endl;}
     }
 
 }

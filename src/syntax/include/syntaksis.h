@@ -10,11 +10,9 @@ inline std::string list_folder = "lsc";
 inline std::string curent_folder = "crt";
 inline std::string remove_folder = "erase";
 
-extern std::ofstream syntax("syntax.json");
-
 
 struct syntaksis {
     void syntaksis_func(); 
-    void save();
+    
 
 };
