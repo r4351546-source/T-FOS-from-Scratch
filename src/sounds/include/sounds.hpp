@@ -6,8 +6,7 @@
 
 //namespace for sounds
 namespace sounds {
-    used_sounds sound;
-
+    
     //start and shutdown functions sounds
     int start();
     int shutdown();

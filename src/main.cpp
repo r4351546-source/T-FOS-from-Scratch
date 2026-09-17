@@ -54,6 +54,7 @@ int realize::program() {
 string input;
 string version = "0.1";
 
+
 //start
 
 //start sound
@@ -86,6 +87,7 @@ registr user;
 niofetch niofetch;
 //7.syntax
 syntaksis stx;
+
 
 
 std::this_thread::sleep_for(std::chrono::milliseconds(1000));

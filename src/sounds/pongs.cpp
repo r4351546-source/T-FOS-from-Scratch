@@ -1,6 +1,8 @@
 #include "include/sounds.hpp"
 #include "include/bodies.hpp"
 
+used_sounds sound;
+
 int sounds::pong1() {
     return sound.pong1;
 }
