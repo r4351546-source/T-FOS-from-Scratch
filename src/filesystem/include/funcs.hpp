@@ -1,9 +1,5 @@
 #pragma once
-#include <fstream>
-#include <string>
 
-//saving file
-extern std::ofstream savefile("vfs.json");
 
 struct commands {
     

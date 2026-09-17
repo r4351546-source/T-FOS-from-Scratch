@@ -3,6 +3,6 @@
 
 namespace outText {
     inline std::string text;
-    inline void textout();
+    void textout();
     inline std::string command = "out";
 }

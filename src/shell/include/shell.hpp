@@ -8,8 +8,6 @@ inline static std::string the_shell = "starter";
 
 struct shell {
 
-
-
 void input();
 
 void the_divius();

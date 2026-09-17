@@ -14,10 +14,6 @@ std::cin >> *targetName;
 folders* newFolder = new folders{*targetName, curent};
 curent->children[*targetName] = newFolder;
 
-
-savefile << "{" << endl;
-savefile << "\"folder\": \"" << curent->children[*targetName]->name << "\"" << endl;
-savefile << "}" << endl;
 cout << "folder created" << endl;
 
 delete targetName;
