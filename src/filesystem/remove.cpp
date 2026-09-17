@@ -31,7 +31,7 @@ void commands::remove() {
         cout << GREEN << "Folder '" << foldername << "' removed successfully." << RESET << endl;
 
     }
-    else if(foldername == "sys/" + login) {
+    else if(foldername == "system/" + login) {
         sounds::done();
         cout << RED << "You cannot remove your own system folder." << RESET << endl;
     }    
