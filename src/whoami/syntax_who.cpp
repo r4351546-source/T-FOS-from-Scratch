@@ -1,7 +1,7 @@
-#include "shell/include/syntaksis.h"
+#include "syntax/include/syntaksis.h"
 #include "whoami.hpp"
 #include <iostream>
 
 void who::s() {
-cout << sx_name << " syntax" << endl;
+std::cout << sx_name << " syntax" << std::endl;
 }
