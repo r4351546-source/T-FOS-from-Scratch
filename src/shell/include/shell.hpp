@@ -1,10 +1,10 @@
 #pragma once
 #include <string>
-#include <fstream>
 
-inline std::string sh_name = "[output]t-fos>>";
-inline std::string the_shell = "starter";
-extern std::ofstream shelljs("shell.json");
+
+inline static std::string sh_name = "command>>";
+inline static std::string the_shell = "starter";
+
 
 struct shell {
 

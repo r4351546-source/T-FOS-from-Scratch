@@ -10,7 +10,9 @@ file(GLOB_RECURSE SOURCES src/*.cpp)
 
 add_executable(t-fos ${SOURCES})
 
-target_include_directories(t-fos PRIVATE src)
+target_include_directories(t-fos PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
 
 
 

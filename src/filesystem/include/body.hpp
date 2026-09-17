@@ -8,7 +8,8 @@
 struct folders {
     std::string name;
         folders* parent = nullptr;
-        std::map<std::string, folders*> children;
+        static std::map<std::string, folders*> children;
 };
-inline folders root{"system/" + login + "/", nullptr};
-inline folders* curent = &root;
+inline static folders root{"system/" + login + "/", nullptr};
+inline static folders* curent = &root;
+

@@ -3,12 +3,12 @@
 #include <fstream>
 
 
-inline std::string sx_name = "divius";
-inline std::string create_folder = "folcr";
-inline std::string move_folder = "cds";
-inline std::string list_folder = "lsc";
-inline std::string curent_folder = "crt";
-inline std::string remove_folder = "erase";
+inline static std::string sx_name = "divius";
+inline static std::string create_folder = "folcr";
+inline static std::string move_folder = "cds";
+inline static std::string list_folder = "lsc";
+inline static std::string curent_folder = "crt";
+inline static std::string remove_folder = "erase";
 
 
 struct syntaksis {

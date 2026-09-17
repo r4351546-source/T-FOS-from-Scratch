@@ -1,6 +1,6 @@
 #include "include/registration.hpp"
 #include <iostream>
-#include <string>
+
 
 using namespace std;
 
@@ -15,5 +15,4 @@ cin >> check_password;
 cout << "enter new login" << endl;
 cout << ">> ";
 cin >> login;
-save();
 } 

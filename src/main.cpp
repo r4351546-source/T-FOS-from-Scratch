@@ -68,6 +68,7 @@ std::cout << "dev linuxsoid" << std::endl;
 std::cout << "simple terminal emulator" << std::endl;
 std::cout << "type" << GREEN << "\"help\"" << RESET << " for a list of commands" << std::endl;
 std::cout << "this is not really os! im not saying this" << std::endl;
+std::cout << "source: https://github.com/r4351546-source/T-FOS-from-Scratch" << std::endl;
 
 
 //struct obj creating
@@ -90,8 +91,13 @@ syntaksis stx;
 std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 //start while
 while(true) {
+    //audit of run t-fos
+    if(run == false) {
+        return 0;
+
+    }
 //input start
-std::cout << state::shellout;
+std::cout << the_shell;
 std::getline(std::cin, input);
 
 //help
@@ -154,8 +160,7 @@ else if(input == outText::command) {outText::textout();}
 else if(input == "ex0") {
     sounds::shutdown();
     std::cout << GREEN << "shutdown t-fos from scratch..." << RESET << std::endl;
-    break;
-    return 0;
+    run = false;
 }
 
 //errors
@@ -172,7 +177,6 @@ return 0;
 int main() {
 
 realize prog;
-
 prog.program();
 }
 

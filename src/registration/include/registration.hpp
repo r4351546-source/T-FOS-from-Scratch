@@ -1,16 +1,14 @@
 #pragma once
 #include <string>
-#include <fstream>
 
-inline std::string login = "user";
-inline std::string password;
-inline std::string check_password;
 
-extern std::ofstream file("reg.json");
+inline static std::string login = "user";
+inline static std::string password;
+inline static std::string check_password;
+
+
 struct registr {
 
-        void user_add();
-        void rename();
-
-        void save();
+    void user_add();
+    void rename();
 };
