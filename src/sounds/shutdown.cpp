@@ -1,7 +1,6 @@
 #include "include/sounds.hpp"
-#include "include/bodies.hpp"
+#include <cstdlib>
 
 int sounds::shutdown() {
-    used_sounds sound;
-    return sound.EndSound;
+    return system("paplay src/assets/sounds/shutdown.wav");
 }

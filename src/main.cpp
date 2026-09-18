@@ -17,6 +17,8 @@
 
 //sounds
 #include "sounds/include/sounds.hpp"
+//pong function
+#include "sounds/pong/pong.hpp"
 
 //registration
 #include "registration/include/registration.hpp"
@@ -157,6 +159,9 @@ else if(input == "renam_acc") {user.rename();}
 
 //outText
 else if(input == outText::command) {outText::textout();}
+
+//out sounds 
+else if(input == "pong") {soundsOut::sound();}
 
 //exit
 else if(input == "ex0") {

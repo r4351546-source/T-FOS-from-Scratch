@@ -1,7 +1,7 @@
 #include "include/sounds.hpp"
-#include "include/bodies.hpp"
+#include <cstdlib>
 
 int sounds::start() {
-    used_sounds sound;
-    return sound.StartSound;
+    
+    return system("paplay src/assets/sounds/start.oga");
 }

@@ -11,6 +11,7 @@
 #define YELLOW  "\033[33m"
 #define BLUE    "\033[34m"
 #define MAGENTA "\033[35m"
+#define BURGUNDY  "\033[38;2;128;0;32m"
 
 
 using std::cout;
@@ -43,7 +44,11 @@ cout << "for print your text type: out text" << endl << endl;
 //customize
 cout << YELLOW << "5.customize->>" << RESET << endl;
 cout << "for choose shell type: sh-mode" << endl;
-cout << "for choose your syntax type: sx-mode" << endl;
-
+cout << "for choose your syntax type: sx-mode" << endl << endl;
+cout << BURGUNDY << "6.sounds output" << RESET << endl;
+cout << "for call start sound type: pong start" << endl;
+cout << "for call done/error sound type: pong done" << endl;
+cout << "for call shutdown sound type: pong shutdown" << endl;
+cout << "for call others sounds type: pong '1, 2, 3, or 4'" << endl;
 
 }
