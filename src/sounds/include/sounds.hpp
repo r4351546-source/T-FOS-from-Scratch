@@ -1,9 +1,6 @@
 //header file for sounds modules
 #pragma once
 
-//main header
-#include "bodies.hpp"
-
 //namespace for sounds
 namespace sounds {
     

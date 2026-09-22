@@ -1,5 +1,7 @@
 #include "include/body.hpp"
 #include "include/funcs.hpp"
+
+#include <memory>
 #include <iostream>
 #include <string>
 
@@ -8,13 +10,11 @@ using std::cout;
 using std::endl;
 
 void commands::create_folder() {
-string *targetName = new string;
-std::cin >> *targetName;
+string targetName;
+std::cin >> targetName;
 
-folders* newFolder = new folders{*targetName, curent};
-curent->children[*targetName] = newFolder;
+auto newFolder = std::make_shared<folders>(targetName, curent);
+curent->children[targetName] = newFolder;
 
 cout << "folder created" << endl;
-
-delete targetName;
 }

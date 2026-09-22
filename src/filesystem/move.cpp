@@ -2,6 +2,7 @@
 #include "include/funcs.hpp"
 #include "registration/include/registration.hpp"
 
+
 #include <iostream>
 #include <string>
 
@@ -19,9 +20,9 @@ using std::cin;
 
 
 void commands::move_to_folder() {
-    string* the_target = new string;
-    cin >> *the_target;
-    if(*the_target == "-") {
+    string the_target;
+    cin >> the_target;
+    if(the_target == "-") {
         if(curent->parent != nullptr) {
             curent = curent->parent;
         }
@@ -29,18 +30,17 @@ void commands::move_to_folder() {
             cout << GREEN << "you are in the main root!" << RESET << endl;
         }
     }
-    else if(*the_target == "sys/" + login) {
+    else if(the_target == "system/" + login) {
         cout << RED << "[ERROR]:you cannot move to your own system folder" << RESET << endl;
     }
-    else if(curent->children.count(*the_target)) {
-        if(!curent->children[*the_target]) {
+    else if(curent->children.count(the_target)) {
+        if(!curent->children[the_target]) {
             cout << RED << "[ERROR]:the folder does not exist" << RESET << endl;
         }
         else {
-        curent = curent->children[*the_target];
+        curent = curent->children[the_target].get();
         }
     }
-delete the_target;
 
 }
 

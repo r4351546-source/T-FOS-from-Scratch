@@ -25,17 +25,15 @@ void commands::remove() {
     std::getline(std::cin, foldername);
 
     if (curent->children.find(foldername) != curent->children.end()) {
-
-        delete curent->children[foldername]; 
         curent->children.erase(foldername); 
         cout << GREEN << "Folder '" << foldername << "' removed successfully." << RESET << endl;
 
     }
     else if(foldername == "system/" + login) {
-        sounds::done();
         cout << RED << "You cannot remove your own system folder." << RESET << endl;
     }    
     else {
+        sounds::done();
         cout << RED << "Folder '" << foldername << "' does not exist in the current directory." << RESET << endl;
     }
     
