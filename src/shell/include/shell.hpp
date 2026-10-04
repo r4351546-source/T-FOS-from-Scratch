@@ -2,7 +2,7 @@
 #include <string>
 
 
-inline static std::string sh_name = "starter";
+inline static std::string sh_name = "sh";
 inline static std::string the_shell = "t-fos>>";
 
 
