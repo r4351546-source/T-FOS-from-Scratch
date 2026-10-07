@@ -3,5 +3,5 @@
 
 int sounds::start() {
     
-    return system("paplay src/assets/sounds/start.oga");
+    return system("paplay assets/sounds/start.oga");
 }

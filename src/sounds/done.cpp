@@ -2,5 +2,5 @@
 #include <cstdlib>
 
 int sounds::done() {
-    return system("paplay src/assets/sounds/done.oga");
+    return system("paplay assets/sounds/done.oga");
 }

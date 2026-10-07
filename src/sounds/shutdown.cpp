@@ -2,5 +2,5 @@
 #include <cstdlib>
 
 int sounds::shutdown() {
-    return system("paplay src/assets/sounds/shutdown.wav");
+    return system("paplay assets/sounds/shutdown.wav");
 }
