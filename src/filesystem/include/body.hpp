@@ -5,12 +5,22 @@
 #include <memory>
 #include <string>
 #include <map>
+#include <vector>
 
-struct folders {
-    std::string name;
-        folders* parent = nullptr;
-        std::map<std::string, std::shared_ptr<folders>> children;
+enum class type {
+    file,
+    folder
 };
-inline static folders root{"system/" + login + "/", nullptr};
-inline static folders* curent = &root;
+
+struct vfs {
+    std::string name;
+    type type;
+    vfs* parent = nullptr;
+
+    std::vector<std::string> content;
+    std::map<std::string, std::shared_ptr<vfs>> children;
+};
+
+inline static vfs root{"system/" + login + "/", type::folder, nullptr};
+inline static vfs* current = &root;
 

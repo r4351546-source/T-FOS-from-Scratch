@@ -24,8 +24,8 @@ void commands::remove() {
 
     std::getline(std::cin, foldername);
 
-    if (curent->children.find(foldername) != curent->children.end()) {
-        curent->children.erase(foldername); 
+    if (current->children.find(foldername) != current->children.end()) {
+        current->children.erase(foldername); 
         cout << GREEN << "Folder '" << foldername << "' removed successfully." << RESET << endl;
 
     }

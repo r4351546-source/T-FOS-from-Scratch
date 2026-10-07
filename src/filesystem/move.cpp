@@ -22,23 +22,37 @@ using std::cin;
 void commands::move_to_folder() {
     string the_target;
     cin >> the_target;
+    
+    for (auto& target : current->children) {
+
+    if (target.second->name == the_target) {
+
+        if (target.second->type == type::file) {
+            cout << RED << "[ERROR]:you cannot move to a file" << RESET << endl;
+            return;
+        }
+
+        
+    }
+}
+
     if(the_target == "-") {
-        if(curent->parent != nullptr) {
-            curent = curent->parent;
+        if(current->parent != nullptr) {
+            current = current->parent;
         }
         else {
             cout << GREEN << "you are in the main root!" << RESET << endl;
         }
     }
-    else if(the_target == "system/" + login) {
+    else if(the_target == "syswork/") {
         cout << RED << "[ERROR]:you cannot move to your own system folder" << RESET << endl;
     }
-    else if(curent->children.count(the_target)) {
-        if(!curent->children[the_target]) {
+    else if(current->children.count(the_target)) {
+        if(!current->children[the_target]) {
             cout << RED << "[ERROR]:the folder does not exist" << RESET << endl;
         }
         else {
-        curent = curent->children[the_target].get();
+        current = current->children[the_target].get();
         }
     }
 

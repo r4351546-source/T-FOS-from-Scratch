@@ -7,11 +7,11 @@ using std::endl;
 
 
 void commands::list_folder() {
-    if(curent->children.empty()) {
+    if(current->children.empty()) {
 
     }
     else {
-        for(auto const& [name, folder_ptr] : curent->children) {
+        for(auto const& [name, folder_ptr] : current->children) {
             cout << thenum << "." << name << "<--" << endl;
             thenum++;
         }

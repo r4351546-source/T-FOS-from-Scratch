@@ -102,7 +102,7 @@ while(true) {
     }
 //input start
 std::cout << the_shell;
-std::getline(std::cin, input);
+std::cin >> input;
 
 //help
 if(input == "help") {helper.hlp::help();}
