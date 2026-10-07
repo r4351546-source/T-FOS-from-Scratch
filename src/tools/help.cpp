@@ -45,10 +45,19 @@ cout << "for print your text type: out text" << endl << endl;
 cout << YELLOW << "5.customize->>" << RESET << endl;
 cout << "for choose shell type: sh-mode" << endl;
 cout << "for choose your syntax type: sx-mode" << endl << endl;
+//sounds
 cout << BURGUNDY << "6.sounds output" << RESET << endl;
 cout << "for call start sound type: pong start" << endl;
 cout << "for call done/error sound type: pong done" << endl;
 cout << "for call shutdown sound type: pong shutdown" << endl;
-cout << "for call others sounds type: pong '1, 2, 3, or 4'" << endl;
+cout << "for call others sounds type: pong '1, 2, 3, or 4'" << endl << endl;
+//text editor
+cout << BLUE << "7.text editor->>" << RESET << endl;
+cout << "for call text editor type: teeps" << endl;
+cout << "for call text editor help type: teeps help" << endl;
+cout << "for call text editor info type: teeps info" << endl;
+cout << "for call text editor version type: teeps --vers" << endl;
+cout << "for create new file type: teeps new <file>" << endl;
+cout << "for open old file type: teeps res <file>" << endl << endl;
 
 }

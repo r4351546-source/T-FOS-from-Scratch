@@ -1,34 +1,26 @@
 #include "tools/include/teeps.hpp"
+
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 void teeps::modeinsert() {
     std::string line;
-    while (true) {
-        if(openedFile == nullptr) {
-        
-        if(editing == false) {
+    std::system("clear");
+
+    while (editing && EditMode == mode::insert) {
+        std::getline(std::cin, line);
+
+        if (!std::cin) {
+            editing = false;
             break;
         }
-        else {
-        for(int i = 0; i < teeps::scrollOffset && i < lines.size(); i++) {
-            std::cout << lines[i] << std::endl;
+
+        if (line == "command") {
+            EditMode = mode::command;
+            continue;
         }
-        std::getline(std::cin, line);
+
         lines.push_back(line);
     }
-        
-    }
-    else {
-        for(int i = 0; i < teeps::scrollOffset && i < lines.size(); i++) {
-            std::cout << lines[i] << std::endl;
-        }
-        std::getline(std::cin, line);
-        if(line == "command"){
-            teeps::modecommand();
-        }
-        lines.push_back(line);
-    }
-}
-teeps::save();
 }

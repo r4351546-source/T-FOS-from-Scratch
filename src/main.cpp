@@ -31,6 +31,8 @@
 #include "tools/include/help.hpp"
 //outText
 #include "tools/include/outText.hpp"
+//text editor
+#include "tools/include/teeps.hpp"
 
 //other libs
 #include <iostream>
@@ -89,6 +91,8 @@ registr user;
 niofetch niofetch;
 //7.syntax
 syntaksis stx;
+//8. text editor
+teeps txtd;
 
 
 
@@ -162,6 +166,9 @@ else if(input == outText::command) {outText::textout();}
 
 //out sounds 
 else if(input == "pong") {soundsOut::sound();}
+
+//teeps
+else if(input == "teeps") {txtd.editor("","");}
 
 //exit
 else if(input == "ex0") {

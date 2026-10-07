@@ -1,6 +1,7 @@
 #include "tools/include/teeps.hpp"
 
 void teeps::modeswitcher() {
+    while(editing){
     switch (EditMode) {
         case mode::insert:
             modeinsert();
@@ -9,5 +10,6 @@ void teeps::modeswitcher() {
         case mode::command:
             modecommand();
             break;
+    }
     }
 }

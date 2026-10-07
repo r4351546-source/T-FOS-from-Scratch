@@ -7,6 +7,6 @@ void teeps::save() {
         return;
     }
     openedFile->content = lines; 
-    current->children[openedFile->name]->type = type::file;
+    
     openedFile->type = type::file;
 }
