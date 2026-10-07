@@ -9,4 +9,5 @@ void teeps::open(vfs* file) {
     }
     openedFile = file;
     lines = openedFile->content;
+    
 }

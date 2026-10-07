@@ -24,7 +24,7 @@ struct teeps {
     void modecommand();
     void modeinsert();
     void modeswitcher();
-    void editor(const std::string& fileName);
+    void editor(std::string fileName, std::string args);
     void open(vfs* file);
     void save();
     
