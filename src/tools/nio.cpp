@@ -1,6 +1,7 @@
 #include <iostream>
 #include "include/nio.hpp"
 #include "registration/include/registration.hpp"
+#include "shell/include/shell.hpp"
 
 void niofetch::nio() {
     
@@ -14,7 +15,7 @@ void niofetch::nio() {
     std::cout << CYAN << "  ████████  ████████ " << GREEN << "  " << login << RESET << "@" << GREEN << "tfos\n";
     std::cout << CYAN << "     ██     ██       " << RESET << "  -------------\n";
     std::cout << CYAN << "     ██     ██████   " << YELLOW << "  OS: " << RESET << "T-FOS From Scratch\n";
-    std::cout << CYAN << "     ██     ██       " << YELLOW << "  Shell: " << RESET << "TH-Shell\n";
+    std::cout << CYAN << "     ██     ██       " << YELLOW << "  Shell: " << RESET << sh_name << "\n";
     std::cout << CYAN << "     ██     ██       " << YELLOW << "  Host: " << RESET << "emulator\n";
     std::cout << CYAN << "                     " << YELLOW << "  Architecture: " << RESET << "C++\n\n";
     

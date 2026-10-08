@@ -27,6 +27,7 @@ cout << "for the move to folder type: " << move_folder << " name" << endl;
 cout << "for the see all in folder type: " << list_folder << endl;
 cout << "for the see curent folder type:" << curent_folder << endl;
 cout << "for the see folder address type: " << curent_folder << "$" << endl;
+cout << "for the read file type: " << readfile << " file" << endl;
 cout << "for the remove folder type: " << remove_folder << " name(DONT TYPE: " << remove_folder << " system/" << login << "/)" << endl << endl;
 //account help
 cout << RED << "2.account->>" << RESET << endl;

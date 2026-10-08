@@ -2,8 +2,8 @@
 #include <string>
 
 
-inline static std::string sh_name = "sh";
-inline static std::string the_shell = "t-fos>>";
+inline std::string sh_name = "sh";
+inline std::string the_shell = "t-fos>>";
 
 
 struct shell {
