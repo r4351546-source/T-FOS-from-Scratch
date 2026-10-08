@@ -1,12 +1,12 @@
 #include "pong.hpp"
-#include "src/sounds/include/sounds.hpp"
+#include "sounds/include/sounds.hpp"
 
 #include <iostream>
 #include <string>
 
-int soundsOut::sound() {    
+void soundsOut::sound() {
      std::string sound;
-     std::getline(std::cin, sound);
+     std::cin >> sound;
 
      //if start sound
      if(sound == "start") {sounds::start();}

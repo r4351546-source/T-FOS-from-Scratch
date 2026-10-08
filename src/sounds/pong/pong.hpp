@@ -2,5 +2,5 @@
 #include "sounds/include/sounds.hpp" 
 
 namespace soundsOut {
-    int sound();
+    void sound();
 };

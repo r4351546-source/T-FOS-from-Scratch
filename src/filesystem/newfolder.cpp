@@ -13,7 +13,7 @@ void commands::create_folder() {
 string targetName;
 std::getline(std::cin, targetName);
 
-auto newFolder = std::make_shared<vfs>(targetName, current);
+auto newFolder = std::make_shared<vfs>(targetName, type::folder, current);
 current->children[targetName] = newFolder;
 
 static type folderType = type::folder;
