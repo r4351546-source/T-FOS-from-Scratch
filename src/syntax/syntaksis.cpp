@@ -33,6 +33,7 @@ void syntaksis::syntaksis_func() {
             move_folder = "cds";
             curent_folder = "crt";
             remove_folder = "erase";
+            readfile = "resys";
 
             break;
         }
@@ -44,6 +45,7 @@ void syntaksis::syntaksis_func() {
             move_folder = "cd";
             curent_folder = "pwd";
             remove_folder = "rm";
+            readfile = "cat";
            
             break;
         }
@@ -55,6 +57,7 @@ void syntaksis::syntaksis_func() {
             move_folder = "cps";
             curent_folder = "scr";
             remove_folder = "delq";
+            readfile = "readf";
             
             break;
         }

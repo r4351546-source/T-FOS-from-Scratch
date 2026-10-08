@@ -9,6 +9,7 @@ inline static std::string move_folder = "cds";
 inline static std::string list_folder = "lsc";
 inline static std::string curent_folder = "crt";
 inline static std::string remove_folder = "erase";
+inline static std::string readfile = "resys";
 
 
 struct syntaksis {

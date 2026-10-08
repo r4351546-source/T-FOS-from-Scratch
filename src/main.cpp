@@ -117,6 +117,7 @@ else if(input == "whoami") {whom.main();}
 //------------------
 //filesystem
 //------------------
+
 //curent folder;
 else if(input == curent_folder) {fs.curent_folder();}
 
@@ -134,6 +135,9 @@ else if(input == remove_folder) {fs.remove();}
 
 //hex folder address
 else if(input == curent_folder + "$") {fs.folder_hex();}
+
+//read file
+else if(input == readfile) {fs.read();}
 
 //-----------------
 //end of filesystem

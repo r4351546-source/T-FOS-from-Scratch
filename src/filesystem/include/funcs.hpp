@@ -11,7 +11,8 @@ void list_folder();
 void curent_folder();
 void folder_hex();
 void remove();
-
+//for files
+void read();
 
 
 };
