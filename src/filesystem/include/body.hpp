@@ -13,9 +13,6 @@ enum class type {
 };
 
 struct vfs {
-    
-
-   
     std::string name;
     type type;
     vfs* parent = nullptr;
