@@ -20,7 +20,7 @@ void syntaksis::syntaksis_func() {
     cout << "-- for enable your syntaks logic type: mq-enable name" << endl;
 
 
-    while(true) {
+
     getline(cin, input);
 
     if(input == "mq-enable") {
@@ -34,8 +34,6 @@ void syntaksis::syntaksis_func() {
             curent_folder = "crt";
             remove_folder = "erase";
             readfile = "resys";
-
-            break;
         }
         else if(syntaks == "linux") {
             cout << "syntaksis '" << syntaks << "' enable now" << endl;
@@ -46,8 +44,6 @@ void syntaksis::syntaksis_func() {
             curent_folder = "pwd";
             remove_folder = "rm";
             readfile = "cat";
-           
-            break;
         }
         else if(syntaks == "klike") {
             cout << "syntaksis '" << syntaks << "' enable now" << endl;
@@ -58,8 +54,6 @@ void syntaksis::syntaksis_func() {
             curent_folder = "scr";
             remove_folder = "delq";
             readfile = "readf";
-            
-            break;
         }
         else {
             sounds::done();
@@ -71,4 +65,4 @@ void syntaksis::syntaksis_func() {
         cout<< RED << "[ERROR]: incorrect command" << RESET << endl;}
     }
 
-}
+
