@@ -1,4 +1,5 @@
 #include "tools/include/teeps.hpp"
+#include "filesystem/include/body.hpp"
 
 #include <iostream>
 #include <limits>
@@ -73,9 +74,9 @@ void teeps::editor(std::string fileName, std::string args) {
             std::cout << "File not found: " << fileName << std::endl;
             return;
         }
-
+        else {
         name = fileName;
-
+        
         std::cin.ignore(
             std::numeric_limits<std::streamsize>::max(),
             '\n'
@@ -87,6 +88,7 @@ void teeps::editor(std::string fileName, std::string args) {
         EditMode = mode::insert;
 
         modeswitcher();
+        }
     }
 
     else {
