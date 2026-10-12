@@ -1,4 +1,5 @@
 #include "include/registration.hpp"
+#include "filesystem/include/body.hpp"
 #include <iostream>
 
 
@@ -15,4 +16,5 @@ cin >> check_password;
 cout << "enter new login" << endl;
 cout << ">> ";
 cin >> login;
+root.name = "/system/" + login + "/";
 } 

@@ -1,4 +1,5 @@
 #include "include/registration.hpp"
+#include "filesystem/include/body.hpp"
 #include <iostream>
 
 
@@ -7,6 +8,7 @@ void registr::user_add() {
 using namespace std;
 cout << "login for new user: ";
 cin >> login;
+root.name = "/system/" + login + "/";
 cout << "password for user " << login << ": ";
 cin >> password;
 cout << "again: ";
