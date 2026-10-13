@@ -11,7 +11,7 @@ using std::endl;
 
 void commands::create_folder() {
 string targetName;
-std::getline(std::cin, targetName);
+std::cin >> targetName;
 
 auto newFolder = std::make_shared<vfs>(targetName, type::folder, current);
 current->children[targetName] = newFolder;

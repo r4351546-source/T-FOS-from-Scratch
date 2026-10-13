@@ -22,7 +22,7 @@ using std::cin;
 void commands::remove() {
     std::string foldername;
 
-    std::getline(std::cin, foldername);
+    std::cin >> foldername;
 
     if (current->children.find(foldername) != current->children.end()) {
         current->children.erase(foldername); 
