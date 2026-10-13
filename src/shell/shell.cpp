@@ -37,8 +37,8 @@ string input_log;
     cout << "-.shell: t-fos@user~/" << endl << endl;
     //cmd shell
     //7.>>
-    cout << "7.for cmd shell type 'sp-tf install cmd'" << endl;
-    cout << "-.shell: system/user/:>" << endl << endl;
+    cout << "7.for cmd shell type 'sp-tf install dsh'" << endl;
+    cout << "-.shell: user@directory|%" << endl << endl;
     
     //input
     cin >> packet_manager;

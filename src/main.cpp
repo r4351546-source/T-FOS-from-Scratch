@@ -125,7 +125,7 @@ documentation->content = {
     "i many times do refactoring and rewrite archtecture",
     "because of code be spaghetti",
     "what you can do in:",
-    "shell mode(sh-mode): put various shells, what you want, im like cmd shell",
+    "shell mode(sh-mode): put various shells, what you want, im like dsh shell",
     "syntax mode(sx-mode): put various syntaxs: klike, linux, divius",
     "6.out, this command gives you change out your text, what you want",
     "7.whoami: whoami -u out username(login), whoami -t out your shell now, whoami -s out syntax",
@@ -142,14 +142,14 @@ while(true) {
         return 0;
 
     }
-    if(sh_name == "cmd") {
+    if(sh_name == "dsh") {
         auto* p = current;
-        std::string path = p->parent->name;
+        std::string path = p->name;
 
         while(p == p->parent) {
             path = p->name + (p == &root ? "" : "/") + path;
         }
-        std::cout << path << ":>";
+        std::cout << login << "@" << path << "|%";
     }
 
     else {
