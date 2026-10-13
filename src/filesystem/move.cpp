@@ -20,41 +20,32 @@ using std::cin;
 
 
 void commands::move_to_folder() {
-    string the_target;
-    cin >> the_target;
-    
-    for (auto& target : current->children) {
+    string fname;
+    cin >> fname;
 
-    if (target.second->name == the_target) {
-
-        if (target.second->type == type::file) {
-            cout << RED << "[ERROR]:you cannot move to a file" << RESET << endl;
-            return;
-        }
-
-        
-    }
-}
-
-    if(the_target == "-") {
-        if(current->parent != nullptr) {
+        current->children.find(fname);
+        if(fname == "-" && current->parent != nullptr) {
             current = current->parent;
         }
-        else {
-            cout << GREEN << "you are in the main root!" << RESET << endl;
-        }
-    }
-    else if(the_target == "syswork/") {
-        cout << RED << "[ERROR]:you cannot move to your own system folder" << RESET << endl;
-    }
-    else if(current->children.count(the_target)) {
-        if(!current->children[the_target]) {
-            cout << RED << "[ERROR]:the folder does not exist" << RESET << endl;
-        }
-        else {
-        current = current->children[the_target].get();
-        }
-    }
 
+        else if(fname == "-" && current->parent == nullptr) {
+            cout << "you are in root" << endl;
+        }
+
+        else if(fname == "system/") {
+            cout << "you dont have permissions" << endl;
+        }
+
+        else if(current->children.find(fname) == current->children.end()
+                || current->children.find(fname)->second->type == type::file
+        ) 
+        {
+            cout << "directory does not exist" << endl;
+        }
+
+        else {
+            current = current->children[fname].get();
+        }
+    
 }
 

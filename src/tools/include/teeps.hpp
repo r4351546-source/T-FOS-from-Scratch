@@ -38,7 +38,7 @@ struct teeps {
     size_t cursorPosition = 0;
     size_t currentLine = 0;
     size_t scrollOffset = 0;
-    size_t visibleLines = 10;
+    size_t visibleLines = 40;
 
     bool editing = false;
 };

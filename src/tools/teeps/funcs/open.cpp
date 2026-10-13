@@ -10,4 +10,10 @@ void teeps::open(vfs* file) {
     openedFile = file;
     lines = openedFile->content;
     
+    if(lines.empty()) lines.emplace_back();
+
+    currentLine = 0;
+    cursorPosition = 0;
+    scrollOffset = 0;
+
 }
