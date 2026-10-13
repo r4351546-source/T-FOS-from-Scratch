@@ -21,10 +21,10 @@ void syntaksis::syntaksis_func() {
 
 
 
-    getline(cin, input);
+    cin >> input;
 
     if(input == "mq-enable") {
-        getline(cin, syntaks);
+        cin >> syntaks;
         if(syntaks == "divius") {
             cout << "syntaksis '" << syntaks << "' enable now" << endl;
             sx_name = "divius";

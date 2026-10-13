@@ -144,7 +144,7 @@ while(true) {
     }
     if(sh_name == "cmd") {
         auto* p = current;
-        std::string path = p->name;
+        std::string path = p->parent->name;
 
         while(p == p->parent) {
             path = p->name + (p == &root ? "" : "/") + path;

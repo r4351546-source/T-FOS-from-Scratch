@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iostream>
 #include <string>
+#include <sys/ioctl.h>
 
 #include <termios.h>
 #include <unistd.h>
@@ -69,6 +70,12 @@ void teeps::modeinsert() {
         if (currentLine >= scrollOffset + visibleLines) {
             scrollOffset = currentLine - visibleLines + 1;
         }
+        struct winsize terminalSize{};
+
+        if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &terminalSize) == 0
+        && terminalSize.ws_row > 1) {
+        visibleLines = terminalSize.ws_row - 1;
+        }
 
         // rdraw editor
         std::cout << "\033[2J\033[H";
@@ -81,6 +88,7 @@ void teeps::modeinsert() {
             }
 
             std::cout << "\033[K\n";
+            
         }
 
         std::cout << "\033[K"

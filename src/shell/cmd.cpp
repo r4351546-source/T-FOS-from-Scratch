@@ -6,7 +6,7 @@
 
 void shell::cmd() {
     sh_name = "cmd";
-    the_shell = current->name + ":>";
+    the_shell = current->parent->name + ":>";
     std::cout << "search packet.." << std::endl;
     std::cout << "sucees! packet download" << std::endl;
 }
