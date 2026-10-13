@@ -36,16 +36,15 @@ void commands::move_to_folder() {
             cout << "you dont have permissions" << endl;
         }
 
-        else if(current->children.find(fname) == current->children.end()
-                || current->children.find(fname)->second->type == type::file
-        ) 
-        {
-            cout << "directory does not exist" << endl;
-        }
+        auto it = current->children.find(fname);
 
-        else {
-            current = current->children[fname].get();
-        }
-    
+    if (it == current->children.end() ||
+        it->second->type == type::file) {
+        cout << "directory does not exist" << endl;
+        return;
+    }
+
+    current = it->second.get();
 }
+
 
