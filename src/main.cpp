@@ -149,7 +149,7 @@ while(true) {
         while(p == p->parent) {
             path = p->name + (p == &root ? "" : "/") + path;
         }
-        std::cout << login << "@" << path << "|%";
+        std::cout << login << "@" << path << "|% ";
     }
 
     else {

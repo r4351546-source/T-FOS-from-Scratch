@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-void shell::cmd() {
+void shell::dsh() {
     sh_name = "dsh";
     the_shell = login + "@" + current->name + "|%";
     std::cout << "search packet.." << std::endl;

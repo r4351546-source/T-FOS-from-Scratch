@@ -60,7 +60,7 @@ string input_log;
             //klike shell
             else if(shell == "klike") {klike();}
             //cmd
-            else if(shell == "cmd") {cmd();}
+            else if(shell == "dsh") {dsh();}
             //error
             else {
                 cout << "[ERROR]" << endl;

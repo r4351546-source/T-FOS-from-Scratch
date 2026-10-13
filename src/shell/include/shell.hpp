@@ -16,5 +16,5 @@ void wesh();
 void smesh();
 void basic();
 void klike();
-void cmd();
+void dsh();
 };
