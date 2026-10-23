@@ -6,6 +6,12 @@
 #include <string>
 #include <map>
 #include <vector>
+enum class dir {
+    goToParent,
+    defDirectory,
+    rootDir,
+    other
+};
 
 enum class type {
     file,
@@ -15,6 +21,7 @@ enum class type {
 struct vfs {
     std::string name;
     type type;
+    dir dir;
     vfs* parent = nullptr;
 
     std::vector<std::string> content;
@@ -22,7 +29,7 @@ struct vfs {
 
     inline vfs* defFiles(const std::string& name) {
     auto newFile = std::make_shared<vfs>(
-        name, type::file, this
+        name, type::file, dir::other, this
     );
 
     vfs* result = newFile.get();
@@ -33,7 +40,7 @@ struct vfs {
 
     inline vfs* defFolders(const std::string& name) {
     auto newFolder = std::make_shared<vfs>(
-        name, type::folder, this
+        name, type::folder, dir::defDirectory, this
     );
 
     vfs* result = newFolder.get();
@@ -42,7 +49,8 @@ struct vfs {
     return result;
     }
 };
-inline vfs root{"system/" + login + "/", type::folder, nullptr};
+inline vfs root{"system/" + login + "/", type::folder, 
+    dir::rootDir,  nullptr};
 inline vfs* current = &root;
 
 

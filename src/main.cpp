@@ -133,7 +133,6 @@ documentation->content = {
 };
 
 
-
 std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 //start while
 while(true) {
@@ -142,6 +141,7 @@ while(true) {
         return 0;
 
     }
+
     if(sh_name == "dsh") {
         auto* p = current;
         std::string path = p->name;

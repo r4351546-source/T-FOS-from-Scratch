@@ -23,8 +23,8 @@ void commands::move_to_folder() {
     string fname;
     cin >> fname;
 
-        current->children.find(fname);
         if(fname == "-" && current->parent != nullptr) {
+            dir::goToParent;
             current = current->parent;
         }
 
@@ -32,18 +32,17 @@ void commands::move_to_folder() {
             cout << "you are in root" << endl;
         }
 
-        else if(fname == "system/") {
+        else if(fname == "system/" ) {
             cout << "you dont have permissions" << endl;
         }
 
         auto it = current->children.find(fname);
-
     if (it == current->children.end() ||
-        it->second->type == type::file) {
+        it->second->type == type::file  ) {
         cout << "directory does not exist" << endl;
         return;
     }
-
+    
     current = it->second.get();
 }
 

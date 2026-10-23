@@ -12,8 +12,12 @@ using std::endl;
 void commands::create_folder() {
 string targetName;
 std::cin >> targetName;
+if(targetName == "+" || targetName == "-" ||
+    targetName == "/" ) {
+        cout << "incorrect folder/directory name" << endl;
+    }
 
-auto newFolder = std::make_shared<vfs>(targetName, type::folder, current);
+auto newFolder = std::make_shared<vfs>(targetName, type::folder, dir::defDirectory, current);
 current->children[targetName] = newFolder;
 
 static type folderType = type::folder;
