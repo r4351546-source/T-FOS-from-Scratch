@@ -1,7 +1,7 @@
 #include "include/help.hpp"
 #include "syntax/include/syntaksis.h"
 #include <iostream>
-#include "registration/include/registration.hpp"
+#include "users/include/registration.hpp"
 
 
 //colors
@@ -31,8 +31,8 @@ cout << "for the read file type: " << readfile << " file" << endl;
 cout << "for the remove folder type: " << remove_folder << " name(DONT TYPE: " << remove_folder << " system/" << login << "/)" << endl << endl;
 //account help
 cout << RED << "2.account->>" << RESET << endl;
-cout << "for create account type: reg" << endl;
-cout << "for the rename acoount type: renam_acc" << endl << endl;
+cout << "for create account type: adduser" << endl;
+cout << "for the rename acoount type: rename" << endl << endl;
 //information
 cout << GREEN << "3.info->>" << RESET << endl;
 cout << "for see your shell type: whoami -t" << endl;
@@ -63,6 +63,6 @@ cout << "for open old file type: teeps res <file>" << endl << endl;
 //system
 cout << GREEN << "8.system->>" << RESET << endl;
 cout << "for exit type: ex0" << endl;
-cout << "for clear display type: cldr" << endl << endl;
+cout << "for clear display type: cls" << endl << endl;
 
 }

@@ -147,9 +147,9 @@ while(true) {
         std::string path = p->name;
 
         while(p == p->parent) {
-            path = p->name + (p == &root ? "" : "/") + path;
+            path = p->parent->name + (p == &root ? "" : "/") + path;
         }
-        std::cout << login << "@" << path << "|% ";
+        std::cout << RED << login << RESET  << "@" << path << GREEN << "|% " << RESET;
     }
 
     else {
@@ -207,7 +207,7 @@ else if(input == "sh-mode") {main_sh.input();}
 //---------------
 
 //user added
-else if(input == "reg") {user.user_add();}
+else if(input == "adduser") {user.user_add();}
 
 //user renamed
 else if(input == "renam_acc") {user.rename();}
@@ -230,7 +230,7 @@ else if(input == "ex0") {
     std::cout << GREEN << "shutdown t-fos from scratch..." << RESET << std::endl;
     run = false;
 }
-else if(input == "cldr") {
+else if(input == "cls") {
     std::system("clear");
 }
 

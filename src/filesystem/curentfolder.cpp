@@ -7,6 +7,7 @@ using std::cout;
 using std::endl;
 
 void commands::curent_folder() {
-cout << "curent folder: " << current->name << endl;
+auto dirnow = current->parent->name;
+cout << "curent folder: " << dirnow << endl;
 
 }

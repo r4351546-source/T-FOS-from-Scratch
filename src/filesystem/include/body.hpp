@@ -6,7 +6,7 @@ body for vfs(Virtual File System)
 
 #pragma once
 
-#include "registration/include/registration.hpp"
+#include "users/include/registration.hpp"
 
 #include <memory>
 #include <string>
@@ -55,7 +55,7 @@ struct vfs {
     return result;
     }
 };
-inline vfs root{"system/" + login + "/", type::folder, 
+inline vfs root{"system/", type::folder, 
     dir::rootDir,  nullptr};
 inline vfs* current = &root;
 
