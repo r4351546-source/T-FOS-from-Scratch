@@ -20,7 +20,7 @@ using std::cin;
 
 
 void commands::move_to_folder() {
-    dir dircheck;
+    dir dircheck = dir::defDirectory;
     
     if(dircheck == dir::goToParent) {
         current = current->parent;
@@ -29,13 +29,15 @@ void commands::move_to_folder() {
     string fname;
     cin >> fname;
 
-        if(fname == "-" && current->parent != nullptr) {
-            dir::goToParent;
+        if(fname == "-") {
+            if(current->parent == nullptr) {
+            cout << "you are in root" << endl;
+            return;
+        }
+        dircheck = dir::goToParent;
         }
 
-        else if(fname == "-" && current->parent == nullptr) {
-            cout << "you are in root" << endl;
-        }
+        
 
         else if(fname == "system/" ) {
             cout << "you dont have permissions" << endl;

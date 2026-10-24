@@ -15,6 +15,7 @@ std::cin >> targetName;
 if(targetName == "+" || targetName == "-" ||
     targetName == "/" ) {
         cout << "incorrect folder/directory name" << endl;
+        return;
     }
 
 auto newFolder = std::make_shared<vfs>(targetName, type::folder, dir::defDirectory, current);
