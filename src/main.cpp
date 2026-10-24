@@ -117,6 +117,15 @@ while(true) {
     else {
     std::cout << the_shell;
     }
+    while (std::cin.peek() == ' ' ||
+       std::cin.peek() == '\t') {
+    std::cin.get();
+    }
+
+    if (std::cin.peek() == '\n') {
+    std::cin.get();
+    continue;
+    }
 
 std::cin >> input;
 
