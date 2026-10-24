@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void funcs::adduser() {
+void funcs::rename() {
     string check_password;
     usr x;
     

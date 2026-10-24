@@ -21,7 +21,7 @@
 #include "sounds/pong/pong.hpp"
 
 //registration
-#include "registration/include/registration.hpp"
+#include "users/include/registration.hpp"
 
 //tools
 
@@ -57,12 +57,12 @@ int realize::program() {
     //strings
 string input;
 string version = "0.1";
-
-
 //start
 
+//for havent latency use threads for sounds
+
 //start sound
-sounds::start();
+std::thread soundStart(sounds::start);
 //1 os name
 std::cout << "t-fos from scratch" << std::endl;
 //2, version status
@@ -86,7 +86,7 @@ commands fs;
 //4.whoami
 who whom;
 //5.user
-registr user;
+usr user;
 //6.nio
 niofetch niofetch;
 //7.syntax
@@ -111,7 +111,7 @@ while(true) {
         while(p == p->parent) {
             path = p->parent->name + (p == &root ? "" : "/") + path;
         }
-        std::cout << RED << login << RESET  << "@" << path << GREEN << "|% " << RESET;
+        std::cout << RED << user.login << RESET  << "@" << path << GREEN << "|% " << RESET;
     }
 
     else {
@@ -169,10 +169,14 @@ else if(input == "sh-mode") {main_sh.input();}
 //---------------
 
 //user added
-else if(input == "adduser") {user.user_add();}
+else if(input == "adduser") {funcs::adduser();}
 
 //user renamed
-else if(input == "renam_acc") {user.rename();}
+else if(input == "rename") {funcs::rename();}
+
+//user switch
+else if(input == "usersw") {funcs::switchUser();}
+
 //---------------
 //end of user settings
 //---------------
@@ -198,7 +202,8 @@ else if(input == "cls") {
 
 //errors
 else {
-    sounds::done();
+    std::thread sound(sounds::done);
+    sound.join();
     std::cout << RED << "[ERROR]:command '" << input << "' type help for see commands" << RESET << std::endl;
 }
 
@@ -207,8 +212,9 @@ else {
 return 0;
 }
 
-int main() {
+// int main
 
+int main() {
 realize prog;
 prog.program();
 }

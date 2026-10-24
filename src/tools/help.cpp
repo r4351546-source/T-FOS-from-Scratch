@@ -28,11 +28,12 @@ cout << "for the see all in folder type: " << list_folder << endl;
 cout << "for the see curent folder type:" << curent_folder << endl;
 cout << "for the see folder address type: " << curent_folder << "$" << endl;
 cout << "for the read file type: " << readfile << " file" << endl;
-cout << "for the remove folder type: " << remove_folder << " name(DONT TYPE: " << remove_folder << " system/" << login << "/)" << endl << endl;
+cout << "for the remove folder type: " << remove_folder << " name(DONT TYPE: " << remove_folder << " system/)" << endl << endl;
 //account help
 cout << RED << "2.account->>" << RESET << endl;
-cout << "for create account type: adduser" << endl;
-cout << "for the rename acoount type: rename" << endl << endl;
+cout << "for create user type: adduser" << endl;
+cout << "for the rename user type: rename" << endl;
+cout << "for switch user type: usersw" << endl << endl;
 //information
 cout << GREEN << "3.info->>" << RESET << endl;
 cout << "for see your shell type: whoami -t" << endl;
