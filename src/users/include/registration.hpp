@@ -2,13 +2,15 @@
 #include <string>
 #include <memory>
 #include <tuple>
+#include <map>
 #include <filesystem/include/body.hpp>
+#include <string>
 
 struct usr {
     std::string login;
-    type type = type::user;
     std::string password;
-    std::tuple<std::string, std::string, std::shared_ptr<vfs>> users;
+    std::string uid;
+    std::map<std::string, std::tuple<std::string, std::string, std::shared_ptr<vfs>>> users;
 };
 
 namespace funcs {

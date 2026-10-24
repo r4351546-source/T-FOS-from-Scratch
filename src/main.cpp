@@ -94,44 +94,6 @@ syntaksis stx;
 //8. text editor
 teeps txtd;
 
-//default folders
-current->defFolders("files");
-current->defFolders("data");
-current->defFolders("development");
-current->defFolders("usr");
-
-//def files(docs)
-auto documentation = current->defFiles("docs.tf");
-documentation->content = {
-    "Hi bro\n",
-    "this documentataion of t-fos",
-    "Terminal-Friendly Operating System",
-    "but....",
-    "whis not os, this os simulator",
-    "but this have many features:\n",
-    "1.working vfs, he supported files, folders, and also have system text editor",
-    "teeps",
-    "teeps — the terminal text editor in the t-fos",
-    "hes have stable version(1.0.0) and stable work",
-    "2.niofetch this is attempt to copy fastfetch but for",
-    "t-fos",
-    "3. user system, hes do bad(in october 8th), but im still rework",
-    "4. pong, whis tool to output sound via command 'pong'",
-    "5.syntax and shell mode",
-    "whis also do bad, why?",
-    "when im start do project, then im little know",
-    "my first work in t-fos became shell, syntax, and user system",
-    "because of im little know then, imn then write bad code",
-    "i many times do refactoring and rewrite archtecture",
-    "because of code be spaghetti",
-    "what you can do in:",
-    "shell mode(sh-mode): put various shells, what you want, im like dsh shell",
-    "syntax mode(sx-mode): put various syntaxs: klike, linux, divius",
-    "6.out, this command gives you change out your text, what you want",
-    "7.whoami: whoami -u out username(login), whoami -t out your shell now, whoami -s out syntax",
-    "8.ex0: shutdown but for t-fos\n"
-};
-
 
 std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 //start while
