@@ -44,11 +44,14 @@ void commands::move_to_folder() {
         }
 
         auto it = current->children.find(fname);
+
     if (it == current->children.end() ||
         it->second->type == type::file 
         || dircheck == dir::goToParent || 
-        dircheck != dir::defDirectory 
-      ) {
+        dircheck != dir::defDirectory ||
+         it->second->type == type::user
+      ) 
+      {
         cout << "directory does not exist" << endl;
         return;
     }

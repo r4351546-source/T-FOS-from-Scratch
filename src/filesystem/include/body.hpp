@@ -21,7 +21,8 @@ enum class dir {
 
 enum class type {
     file,
-    folder
+    folder,
+    user
 };
 
 struct vfs {
