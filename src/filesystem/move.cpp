@@ -20,12 +20,17 @@ using std::cin;
 
 
 void commands::move_to_folder() {
+    dir dircheck;
+    
+    if(dircheck == dir::goToParent) {
+        current = current->parent;
+    }
+
     string fname;
     cin >> fname;
 
         if(fname == "-" && current->parent != nullptr) {
             dir::goToParent;
-            current = current->parent;
         }
 
         else if(fname == "-" && current->parent == nullptr) {
@@ -38,7 +43,10 @@ void commands::move_to_folder() {
 
         auto it = current->children.find(fname);
     if (it == current->children.end() ||
-        it->second->type == type::file  ) {
+        it->second->type == type::file 
+        || dircheck == dir::goToParent || 
+        dircheck != dir::defDirectory
+      ) {
         cout << "directory does not exist" << endl;
         return;
     }
