@@ -87,11 +87,12 @@ documentation->content = {
     "8.ex0: shutdown but for t-fos\n"
 };
 generate_uid();
+type usertype = type::user;
 root->name = x.login;
 root->parent = nullptr;
 x.users.emplace(
         x.login,
-        std::make_tuple(x.password, x.uid, root)
+        std::make_tuple(x.password, x.uid, usertype, root)
     );
 
 } 

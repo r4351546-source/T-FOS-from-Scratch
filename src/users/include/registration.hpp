@@ -10,7 +10,8 @@ struct usr {
     std::string login;
     std::string password;
     std::string uid;
-    std::map<std::string, std::tuple<std::string, std::string, std::shared_ptr<vfs>>> users;
+    std::map<std::string,
+     std::tuple<std::string, std::string, type, std::shared_ptr<vfs>>> users;
 };
 
 namespace funcs {
