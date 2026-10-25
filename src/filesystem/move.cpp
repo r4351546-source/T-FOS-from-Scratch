@@ -57,7 +57,7 @@ void commands::move_to_folder() {
     }
     else if(it->second->type == type::user) {
         std::cout << "this is user directory, please use for this command 'usersw'" << std::endl;
-        return
+        return;
     }
     
     current = it->second.get();
