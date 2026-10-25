@@ -18,5 +18,6 @@ namespace funcs {
     void adduser();
     void rename();
     void switchUser();
+    void userList();
 
 };

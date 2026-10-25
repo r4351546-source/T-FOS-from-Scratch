@@ -84,7 +84,8 @@ documentation->content = {
     "syntax mode(sx-mode): put various syntaxs: klike, linux, divius",
     "6.out, this command gives you change out your text, what you want",
     "7.whoami: whoami -u out username(login), whoami -t out your shell now, whoami -s out syntax",
-    "8.ex0: shutdown but for t-fos\n"
+    "8.ex0: shutdown but for t-fos\n",
+    "for ", x.login
 };
 generate_uid();
 type usertype = type::user;

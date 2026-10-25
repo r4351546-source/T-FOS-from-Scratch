@@ -186,6 +186,9 @@ else if(input == "rename") {funcs::rename();}
 //user switch
 else if(input == "usersw") {funcs::switchUser();}
 
+//user list 
+else if(input == "userls") {funcs::userList();}
+
 //---------------
 //end of user settings
 //---------------
