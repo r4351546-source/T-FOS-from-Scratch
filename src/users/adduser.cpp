@@ -101,5 +101,5 @@ x.users.emplace(
         x.login,
         std::make_tuple(x.password, x.uid, usertype, root)
     );
-
+    current = root.get();
 } 

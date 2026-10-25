@@ -17,4 +17,5 @@ void funcs::setrootpass() {
         return;
     }
     std::cout << "password for root set" << std::endl;
+    x.rootset = true;
 }

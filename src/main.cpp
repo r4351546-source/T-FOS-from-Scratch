@@ -75,6 +75,7 @@ std::cout << "type " << GREEN << "\"help\"" << RESET << " for a list of commands
 std::cout << "this is not really os! im not saying this" << std::endl;
 std::cout << "source: https://github.com/r4351546-source/T-FOS-from-Scratch" << std::endl;
 
+char rootsymbol = '%';
 
 //struct obj creating
 //1.help
@@ -107,25 +108,24 @@ while(true) {
     if(sh_name == "dsh") {
         auto* p = current;
         std::string path = p->name;
+        std::string username;
+        while(username != user.login) {
+            username = user.login;
+        }
 
         while(p == p->parent) {
             path = p->parent->name + (p == &root ? "" : "/") + path;
         }
-        std::cout << RED << user.login << RESET  << "@" << path << GREEN << "|% " << RESET;
+        std::cout << RED << username << RESET  << "@" << path << GREEN << "|" << rootsymbol << " " << RESET;
     }
 
     else {
     std::cout << the_shell;
     }
-    while (std::cin.peek() == ' ' ||
-       std::cin.peek() == '\t') {
-    std::cin.get();
+    while(x.root == true) {
+    rootsymbol = '*';
     }
-
-    if (std::cin.peek() == '\n') {
-    std::cin.get();
-    continue;
-    }
+    
 
 std::cin >> input;
 
@@ -186,6 +186,19 @@ else if(input == "usersw") {funcs::switchUser();}
 //user list 
 else if(input == "userls") {funcs::userList();}
 
+//root password 
+else if(input == "rootset") {
+    if(user.rootset == false) {
+        funcs::setrootpass();
+    }
+    else {
+        std::cout << RED << "root password set now, you cant change root password" << RESET << std::endl;
+    }
+}
+
+//root stats
+else if(input == "rstats") {funcs::rootstat();}
+ 
 //---------------
 //end of user settings
 //---------------
@@ -216,6 +229,15 @@ else {
     std::cout << RED << "[ERROR]:command '" << input << "' type help for see commands" << RESET << std::endl;
 }
 
+while (std::cin.peek() == ' ' ||
+       std::cin.peek() == '\t') {
+    std::cin.get();
+    }
+
+    if (std::cin.peek() == '\n') {
+    std::cin.get();
+    continue;
+    }
 //ending
 }
 return 0;
