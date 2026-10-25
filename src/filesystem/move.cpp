@@ -55,6 +55,10 @@ void commands::move_to_folder() {
         cout << "directory does not exist" << endl;
         return;
     }
+    else if(it->second->type == type::user) {
+        std::cout << "this is user directory, please use for this command 'usersw'" << std::endl;
+        return
+    }
     
     current = it->second.get();
 }
