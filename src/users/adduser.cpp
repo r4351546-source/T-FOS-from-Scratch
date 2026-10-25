@@ -87,7 +87,8 @@ documentation->content = {
     "8.ex0: shutdown but for t-fos\n",
     "for ", x.login
 };
-generate_uid();
+
+x.uid = generate_uid();
 type usertype = type::user;
 root->name = x.login;
 root->parent = nullptr;
