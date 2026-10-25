@@ -65,5 +65,10 @@ cout << "for open old file type: teeps res <file>" << endl << endl;
 cout << GREEN << "8.system->>" << RESET << endl;
 cout << "for exit type: ex0" << endl;
 cout << "for clear display type: cls" << endl << endl;
+//root
+cout << RED << "9.root->>" << RESET << endl;
+cout << "for create password for root type: rootset" << endl;
+cout << "for see root info type: rstats" << endl;
+cout << "for move to root type: usersw root" << endl << endl;
 
 }
