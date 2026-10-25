@@ -6,5 +6,5 @@ using std::endl;
 using std::cout;
 
 void commands::folder_hex() {
-    cout << "folder address: " << current << endl;
+    cout << current << endl;
 }

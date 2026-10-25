@@ -1,6 +1,6 @@
 #include <iostream>
 #include "include/nio.hpp"
-#include "registration/include/registration.hpp"
+#include "users/include/registration.hpp"
 #include "shell/include/shell.hpp"
 
 void niofetch::nio() {
@@ -12,7 +12,7 @@ void niofetch::nio() {
     #define BLUE    "\033[1;34m"
     #define MAGENTA "\033[1;35m"
 
-    std::cout << CYAN << "  ████████  ████████ " << GREEN << "  " << login << RESET << "@" << GREEN << "tfos\n";
+    std::cout << CYAN << "  ████████  ████████ " << GREEN << "  " << x.login << RESET << "@" << GREEN << "tfos\n";
     std::cout << CYAN << "     ██     ██       " << RESET << "  -------------\n";
     std::cout << CYAN << "     ██     ██████   " << YELLOW << "  OS: " << RESET << "T-FOS From Scratch\n";
     std::cout << CYAN << "     ██     ██       " << YELLOW << "  Shell: " << RESET << sh_name << "\n";

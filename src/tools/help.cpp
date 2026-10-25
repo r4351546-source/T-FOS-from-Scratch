@@ -33,7 +33,6 @@ cout << "for the remove folder type: " << remove_folder << " name(DONT TYPE: " <
 cout << RED << "2.account->>" << RESET << endl;
 cout << "for create user type: adduser" << endl;
 cout << "for see see user list type: userls" << endl;
-cout << "for the rename user type: rename" << endl;
 cout << "for switch user type: usersw" << endl << endl;
 //information
 cout << GREEN << "3.info->>" << RESET << endl;

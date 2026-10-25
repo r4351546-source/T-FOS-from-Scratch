@@ -1,5 +1,5 @@
 #include "include/shell.hpp"
-#include "registration/include/registration.hpp"
+#include "users/include/registration.hpp"
 
 #include <iostream>
 #include <string>
@@ -10,7 +10,7 @@ using namespace std;
 
 void shell::the_divius() {
     sh_name = "divius";
-    the_shell = login + "@t-fos>>";
+    the_shell = x.login + "@t-fos>>";
     cout << "search the packet..." << endl;
     this_thread::sleep_for(chrono::seconds(2));
     cout << "sucees! packet downloads" << endl;

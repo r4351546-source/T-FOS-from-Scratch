@@ -180,9 +180,6 @@ else if(input == "sh-mode") {main_sh.input();}
 //user added
 else if(input == "adduser") {funcs::adduser();}
 
-//user renamed
-else if(input == "rename") {funcs::rename();}
-
 //user switch
 else if(input == "usersw") {funcs::switchUser();}
 

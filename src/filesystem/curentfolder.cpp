@@ -7,7 +7,13 @@ using std::cout;
 using std::endl;
 
 void commands::curent_folder() {
-auto dirnow = current->parent->name;
-cout << "curent folder: " << dirnow << endl;
+    std::string path;
+    vfs* node = current;
+
+    while (node != nullptr) {
+        path = node->name + path;
+        node = node->parent;
+    }
+    cout << path << endl;
 
 }

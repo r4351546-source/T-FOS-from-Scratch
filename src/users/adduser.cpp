@@ -8,7 +8,7 @@
 #include <algorithm>
 
 std::string generate_uid() {
-    usr x;
+    
     static const std::string chars =
         "0123456789"
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -30,11 +30,16 @@ std::string generate_uid() {
 
 
 void funcs::adduser() {
-    usr x;
+    
     std::string check_password;
 
     std::cout << "Username(login): ";
     std::cin >> x.login;
+    if(x.login == "root") {
+        std::cout << "valid name: " << x.login << std::endl;
+        x.login = "user";
+        return;
+    }
 
     std::cout << "password: ";
     std::cin >> x.password;
@@ -87,7 +92,7 @@ documentation->content = {
     "8.ex0: shutdown but for t-fos\n",
     "for ", x.login
 };
-
+current->children[x.login] = root;
 x.uid = generate_uid();
 type usertype = type::user;
 root->name = x.login;

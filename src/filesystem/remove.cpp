@@ -1,7 +1,6 @@
 //headers
 #include "include/funcs.hpp"
 #include "include/body.hpp"
-#include "registration/include/registration.hpp"
 #include "sounds/include/sounds.hpp"
 
 //libs
@@ -29,7 +28,7 @@ void commands::remove() {
         cout << GREEN << "Folder '" << foldername << "' removed successfully." << RESET << endl;
 
     }
-    else if(foldername == "system/" + login) {
+    else if(foldername == "system/") {
         cout << RED << "You cannot remove your own system folder." << RESET << endl;
     }    
     else {

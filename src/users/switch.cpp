@@ -7,11 +7,28 @@ void funcs::switchUser() {
     std::string username;
     std::cin >> username;
 
-    usr d;
-    d.users.find(username);
+    auto it = x.users.find(username);
 
-    if(d.users.find(username) != d.users.end()) {
-        
+    if(x.users.find(username) != x.users.end()) {
+        std::cout << "Password: ";
+    std::cin >> x.password;
+
+    if (std::get<0>(it->second) != x.password) {
+        std::cout << "Incorrect password" << std::endl;;
+        return;
+    }
+    x.login = username;
+    x.password = std::get<0>(it->second);
+    x.uid = std::get<1>(it->second);
+
+    current = std::get<3>(it->second).get();
+
+    std::cout << "Switched to " << x.login << '\n';
+    }
+    else if(username == "root") {
+        std::string checkroot;
+        std::cin >> checkroot;
+        if(checkroot != x.rootPasswd) {}
     }
     else {
         std::cout << "user " << username << " dont found" << std::endl;
