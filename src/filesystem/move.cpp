@@ -41,6 +41,7 @@ void commands::move_to_folder() {
 
         else if(fname == "system/" ) {
             cout << "you dont have permissions" << endl;
+            return;
         }
 
         auto it = current->children.find(fname);

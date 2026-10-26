@@ -124,12 +124,12 @@ while(true) {
 
     }
     if (!(std::cin >> input)) {
-    break;
+    return 0;
     }
 
     if(sh_name == "dsh") {
         vfs* curr = current;
-        std::cout << RED << user.login << RESET  << "@" << dsh(curr) << GREEN << "|" << rootsymbol << " " << RESET;
+        std::cout << RED << x.login << RESET  << "@" << dsh(curr) << GREEN << "|" << rootsymbol << " " << RESET;
     }
 
     else {
@@ -146,6 +146,17 @@ while(true) {
     if (std::cin.peek() == '\n') {
     std::cin.get();
     continue;
+    }
+    
+    if (input != outText::command && input != "teeps") {
+    std::cin.ignore(
+        std::numeric_limits<std::streamsize>::max(),
+        '\n'
+    );
+
+    if (std::cin.eof()) {
+        return 0;
+    }
     }
 
 std::cin >> input;

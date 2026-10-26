@@ -55,7 +55,7 @@ struct vfs {
     return result;
     }
 };
-inline vfs root{"system/", type::folder, 
+inline vfs root{"system", type::folder, 
     dir::rootDir,  nullptr};
 inline vfs* current = &root;
 

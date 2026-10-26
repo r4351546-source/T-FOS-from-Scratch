@@ -34,7 +34,7 @@ string input_log;
     //klike shell
     //6.>>
     cout << "6.for klike-shell type 'sp-tf install klike'" << endl;
-    cout << "-.shell: t-fos@user~/" << endl << endl;
+    cout << "-.shell: t-fos~/" << endl << endl;
     //cmd shell
     //7.>>
     cout << "7.for cmd shell type 'sp-tf install dsh'" << endl;
