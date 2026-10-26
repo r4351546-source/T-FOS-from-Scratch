@@ -22,7 +22,7 @@ std::string generate_uid() {
     x.uid.reserve(12);
 
     for (int i = 0; i < 12; ++i) {
-        x.uid += chars[dist(gen)];
+        x.uid = chars[dist(gen)];
     }
 
     return x.uid;

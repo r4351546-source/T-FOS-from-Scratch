@@ -19,22 +19,32 @@ using std::endl;
 using std::cin;
 
 void commands::remove() {
-    std::string foldername;
+    std::string fname;
+    std::cin >> fname;
 
-    std::cin >> foldername;
+    auto t = current->children.find(fname);
 
-    if (current->children.find(foldername) != current->children.end()) {
-        current->children.erase(foldername); 
-        cout << GREEN << "Folder '" << foldername << "' removed successfully." << RESET << endl;
+    if (current->children.find(fname) != current->children.end()) {
+        if(t->second->type == type::file) {
+            current->children.erase(fname);
+            cout << "file '" << fname << "removed successfully. " << endl;
+            return;
+        }
+        else if(t->second->type == type::user) {
+            cout << RED << "you cannot remove user catalog" << RESET << endl;
+        }
+        current->children.erase(fname); 
+        cout << GREEN << "Folder '" << fname << "' removed successfully." << RESET << endl;
 
     }
-    else if(foldername == "system/") {
+    else if(fname == "system/") {
         cout << RED << "You cannot remove your own system folder." << RESET << endl;
     }    
     else {
         sounds::done();
-        cout << RED << "Folder '" << foldername << "' does not exist in the current directory." << RESET << endl;
+        cout << RED << "Folder '" << fname << "' does not exist in the current directory." << RESET << endl;
     }
+
     
 
 }

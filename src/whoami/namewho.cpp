@@ -5,6 +5,5 @@
 using namespace std;
 
 void who::u() {
-    usr x;
-cout << x.login << endl;
+    cout << x.login << endl;
 }

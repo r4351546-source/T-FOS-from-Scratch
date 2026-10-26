@@ -17,6 +17,11 @@ if(targetName == "+" || targetName == "-" ||
         cout << "incorrect folder/directory name" << endl;
         return;
     }
+    auto search = current->children.find(targetName);
+    if(search != current->children.end()) {
+        std::cout << "folder '" << targetName << "' already exsisted" << endl;
+        return;
+    }
 
 auto newFolder = std::make_shared<vfs>(targetName, type::folder, dir::defDirectory, current);
 current->children[targetName] = newFolder;

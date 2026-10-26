@@ -81,6 +81,7 @@ string version = "0.1";
 
 //start sound
 std::thread soundStart(sounds::start);
+soundStart.join();
 //1 os name
 std::cout << "t-fos from scratch" << std::endl;
 //2, version status
@@ -122,6 +123,9 @@ while(true) {
         return 0;
 
     }
+    if (!(std::cin >> input)) {
+    break;
+    }
 
     if(sh_name == "dsh") {
         vfs* curr = current;
@@ -131,7 +135,7 @@ while(true) {
     else {
     std::cout << the_shell;
     }
-    while(x.root == true) {
+    if(x.root == true) {
     rootsymbol = '*';
     }
     while (std::cin.peek() == ' ' ||
