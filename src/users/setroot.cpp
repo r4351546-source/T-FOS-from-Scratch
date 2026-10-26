@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-void funcs::setrootpass() {
+void funcs::makeroot() {
     std::cin >> x.rootPasswd;
     if(x.rootPasswd.size() < 10) {
         std::cout << "size to very small, password must be 10 symbols or more" << std::endl;

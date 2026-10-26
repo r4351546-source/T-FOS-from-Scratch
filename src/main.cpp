@@ -40,6 +40,7 @@
 #include <cstdlib>
 #include <chrono>
 #include <thread>
+#include <memory>
 
 //color
 #define RESET   "\033[0m"
@@ -52,6 +53,23 @@
 #define WHITE   "\033[37m"
 
 using std::string;
+
+std::string dsh(vfs* current) {
+    std::vector<std::string> path;
+    vfs* node = current;
+    while (node != nullptr) {
+        path.push_back(node->name);
+        node = node->parent;
+    }
+
+    std::string result;
+
+    for (auto it = path.rbegin(); it != path.rend(); ++it) {
+        result += "/" + *it;
+    }
+
+    return result;
+}
 
 int realize::program() {
     //strings
@@ -106,17 +124,8 @@ while(true) {
     }
 
     if(sh_name == "dsh") {
-        auto* p = current;
-        std::string path = p->name;
-        std::string username;
-        while(username != user.login) {
-            username = user.login;
-        }
-
-        while(p == p->parent) {
-            path = p->parent->name + (p == &root ? "" : "/") + path;
-        }
-        std::cout << RED << username << RESET  << "@" << path << GREEN << "|" << rootsymbol << " " << RESET;
+        vfs* curr = current;
+        std::cout << RED << user.login << RESET  << "@" << dsh(curr) << GREEN << "|" << rootsymbol << " " << RESET;
     }
 
     else {
@@ -125,7 +134,15 @@ while(true) {
     while(x.root == true) {
     rootsymbol = '*';
     }
-    
+    while (std::cin.peek() == ' ' ||
+       std::cin.peek() == '\t') {
+    std::cin.get();
+    }
+
+    if (std::cin.peek() == '\n') {
+    std::cin.get();
+    continue;
+    }
 
 std::cin >> input;
 
@@ -189,7 +206,7 @@ else if(input == "userls") {funcs::userList();}
 //root password 
 else if(input == "rootset") {
     if(user.rootset == false) {
-        funcs::setrootpass();
+        funcs::makeroot();
     }
     else {
         std::cout << RED << "root password set now, you cant change root password" << RESET << std::endl;
@@ -197,7 +214,7 @@ else if(input == "rootset") {
 }
 
 //root stats
-else if(input == "rstats") {funcs::rootstat();}
+else if(input == "rstats") {funcs::rootv();}
  
 //---------------
 //end of user settings
@@ -229,15 +246,7 @@ else {
     std::cout << RED << "[ERROR]:command '" << input << "' type help for see commands" << RESET << std::endl;
 }
 
-while (std::cin.peek() == ' ' ||
-       std::cin.peek() == '\t') {
-    std::cin.get();
-    }
 
-    if (std::cin.peek() == '\n') {
-    std::cin.get();
-    continue;
-    }
 //ending
 }
 return 0;

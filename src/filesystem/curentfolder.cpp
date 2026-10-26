@@ -7,13 +7,18 @@ using std::cout;
 using std::endl;
 
 void commands::curent_folder() {
-    std::string path;
-    vfs* node = current;
+    std::vector<std::string> path;
+
+    auto node = current;
 
     while (node != nullptr) {
-        path = node->name + path;
+        path.push_back(node->name);
         node = node->parent;
     }
-    cout << path << endl;
 
+    for (auto it = path.rbegin(); it != path.rend(); ++it) {
+        std::cout << "/" << *it;
+    }
+
+    std::cout << '\n';
 }

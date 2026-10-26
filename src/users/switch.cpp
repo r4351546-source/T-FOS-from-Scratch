@@ -26,6 +26,14 @@ void funcs::switchUser() {
     std::cout << "Switched to " << x.login << '\n';
     }
     else if(username == "root") {
+        if(x.rootPasswd.empty()) {
+            while (current->parent) {
+        current = current->parent;
+        }
+        x.login = username;
+        x.password = x.rootPasswd;
+        x.root = true;
+        }
         std::string checkroot;
         std::cin >> checkroot;
         if(checkroot != x.rootPasswd) {
