@@ -14,7 +14,8 @@ void funcs::makeroot() {
     std::cin >> check;
     if(check != x.rootPasswd) {
         std::cout << "password root check failed, root password dont set" << std::endl;
-        x.rootPasswd = x.rootPasswd.empty();
+        x.rootPasswd.clear();
+        x.rootset = false;
         return;
     }
     std::cout << "password for root set" << std::endl;

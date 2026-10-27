@@ -32,6 +32,7 @@ void commands::remove() {
         }
         else if(t->second->type == type::user) {
             cout << RED << "you cannot remove user catalog" << RESET << endl;
+            return;
         }
         current->children.erase(fname); 
         cout << GREEN << "Folder '" << fname << "' removed successfully." << RESET << endl;

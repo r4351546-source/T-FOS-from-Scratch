@@ -18,14 +18,14 @@ std::string generate_uid() {
     static std::uniform_int_distribution<> dist(
         0, chars.size() - 1
     );
-
-    x.uid.reserve(12);
+    std::string uid;
+    uid.reserve(12);
 
     for (int i = 0; i < 12; ++i) {
-        x.uid = chars[dist(gen)];
+        uid += chars[dist(gen)];
     }
 
-    return x.uid;
+    return uid;
 }
 
 
@@ -35,6 +35,11 @@ void funcs::adduser() {
 
     std::cout << "Username(login): ";
     std::cin >> x.login;
+    auto fnd = x.users.find(x.login);
+    if(fnd != x.users.end()) {
+        std::cout << "user '" << x.login << "' already exist" << std::endl;
+        return;
+    }
     if(x.login == "root") {
         std::cout << "valid name: " << x.login << std::endl;
         x.login = "user";
@@ -92,7 +97,7 @@ documentation->content = {
     "8.ex0: shutdown but for t-fos\n",
     "for ", x.login
 };
-    while (current->parent) {
+    while (current->parent != nullptr) {
     current = current->parent;
     }
 current->children[x.login] = root;

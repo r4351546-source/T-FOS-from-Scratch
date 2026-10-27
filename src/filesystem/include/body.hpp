@@ -21,7 +21,8 @@ enum class dir {
 enum class type {
     file,
     folder,
-    user
+    user,
+    main
 };
 
 struct vfs {
@@ -51,11 +52,12 @@ struct vfs {
 
     vfs* result = newFolder.get();
     children[name] = std::move(newFolder);
-
     return result;
+    
     }
+    
 };
-inline vfs root{"system", type::folder, 
+inline vfs root{"system", type::main, 
     dir::rootDir,  nullptr};
 inline vfs* current = &root;
 

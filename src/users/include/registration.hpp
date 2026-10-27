@@ -14,18 +14,15 @@ struct usr {
     std::map<std::string, std::tuple<std::string, std::string, type, std::shared_ptr<vfs>>> users;
     bool root = false;
     bool rootset = false;
-    dir dr;
+    type type;
     usr() {
-        if(dr == dir::rootDir) {
-            root = true;
+        if(type == type::user) {
+            root = false;
         }
         if(!rootPasswd.empty()) {
             rootset = true;
         }
-        if(dr == dir::rootDir) {
-            root = true;
-        }
-
+        
     }
     ~usr() {
 
