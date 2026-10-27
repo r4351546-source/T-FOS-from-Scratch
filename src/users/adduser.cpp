@@ -57,7 +57,7 @@ void funcs::adduser() {
         std::cin >> check_password;
     }
     
-    auto root = std::make_shared<vfs>();
+    auto root = std::make_shared<vfs>(x.login, type::user, dir::defDirectory);
     //default folders
 root->defFolders("files");
 root->defFolders("data");
@@ -100,14 +100,13 @@ documentation->content = {
     while (current->parent != nullptr) {
     current = current->parent;
     }
-current->children[x.login] = root;
+auto uservfs = current->children[x.login] = root;
 x.uid = generate_uid();
 type usertype = type::user;
 root->name = x.login;
-root->parent = nullptr;
+
 x.users.emplace(
         x.login,
-        std::make_tuple(x.password, x.uid, usertype, root)
+        std::make_tuple(x.password, x.uid, usertype, uservfs)
     );
-    current = root.get();
 } 

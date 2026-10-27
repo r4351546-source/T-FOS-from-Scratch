@@ -24,18 +24,22 @@ void commands::move_to_folder() {
 
     string fname;
     cin >> fname;
-
         if(fname == "-") {
             if(current->parent == nullptr) {
             cout << "you are in root" << endl;
             return;
-        }
+            }
+            if(current->type == type::user) {
+                cout << "you are in user catalog, please use usesw root dor move to /system" << endl;  
+            }
+            
         dircheck = dir::goToParent;
         if(dircheck == dir::goToParent) {
             current = current->parent;
         }
         return;
         }
+        
 
         
 
