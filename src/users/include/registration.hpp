@@ -22,6 +22,9 @@ struct usr {
         if(!rootPasswd.empty()) {
             rootset = true;
         }
+        if(dr == dir::rootDir) {
+            root = true;
+        }
 
     }
     ~usr() {

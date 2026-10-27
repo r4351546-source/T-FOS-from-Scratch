@@ -92,6 +92,9 @@ documentation->content = {
     "8.ex0: shutdown but for t-fos\n",
     "for ", x.login
 };
+    while (current->parent) {
+    current = current->parent;
+    }
 current->children[x.login] = root;
 x.uid = generate_uid();
 type usertype = type::user;

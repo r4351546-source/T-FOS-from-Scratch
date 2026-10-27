@@ -42,6 +42,7 @@
 #include <thread>
 #include <memory>
 
+
 //color
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
@@ -71,7 +72,10 @@ std::string dsh(vfs* current) {
     return result;
 }
 
+
 int realize::program() {
+
+    
     //strings
 string input;
 string version = "0.1";
@@ -81,7 +85,7 @@ string version = "0.1";
 
 //start sound
 std::thread soundStart(sounds::start);
-soundStart.join();
+soundStart.detach();
 //1 os name
 std::cout << "t-fos from scratch" << std::endl;
 //2, version status
@@ -123,21 +127,59 @@ while(true) {
         return 0;
 
     }
-    if (!(std::cin >> input)) {
-    return 0;
-    }
 
+    /*
+    shell output
+    --------------
+    */
+    //shells
+
+    //myy favourite, dsh
     if(sh_name == "dsh") {
         vfs* curr = current;
         std::cout << RED << x.login << RESET  << "@" << dsh(curr) << GREEN << "|" << rootsymbol << " " << RESET;
     }
 
-    else {
-    std::cout << the_shell;
+    //basic
+    if(sh_name == "basic") {
+        std::cout << YELLOW << "> " << RESET;
     }
+
+    if(sh_name == "smesh") {
+        std::cout << RED << x.login << RESET << GREEN << "@t-fos-> " << RESET;
+    }
+
+    if(sh_name == "divius") {
+        std::cout << GREEN << x.login << "@> " << RESET;
+    }
+
+    if(sh_name == "chsares") {
+        std::cout << RED << "[" << x.login << RESET << CYAN << "]@command? " << RESET; 
+    }
+
+    if(sh_name == "wesh") {
+        std::cout << BLUE << "terminal" << RESET << "t-fos-> ";
+    }
+    if(sh_name == "klike") {
+        std::cout << YELLOW << x.login << RESET << CYAN << "~/ " << RESET;
+    }
+    if(sh_name == "sh") {
+        std::cout << "t-fos>> "; 
+    }
+
+    /*
+    shells module end 
+    */
+
+    /*root symbol(* in root and % in def user)*/
     if(x.root == true) {
     rootsymbol = '*';
     }
+    else {
+        rootsymbol = '%';
+    }
+    /*end of audit root symbol*/
+
     while (std::cin.peek() == ' ' ||
        std::cin.peek() == '\t') {
     std::cin.get();
@@ -147,17 +189,11 @@ while(true) {
     std::cin.get();
     continue;
     }
-    
-    if (input != outText::command && input != "teeps") {
-    std::cin.ignore(
-        std::numeric_limits<std::streamsize>::max(),
-        '\n'
-    );
 
     if (std::cin.eof()) {
         return 0;
     }
-    }
+    
 
 std::cin >> input;
 
@@ -257,15 +293,21 @@ else if(input == "cls") {
 //errors
 else {
     std::thread sound(sounds::done);
-    sound.join();
+    sound.detach();
     std::cout << RED << "[ERROR]:command '" << input << "' type help for see commands" << RESET << std::endl;
 }
 
-
+if (input != outText::command && input != "teeps") {
+    std::cin.ignore(
+        std::numeric_limits<std::streamsize>::max(),
+        '\n'
+    );
+}
 //ending
 }
-return 0;
 }
+
+
 
 // int main
 

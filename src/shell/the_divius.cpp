@@ -10,7 +10,7 @@ using namespace std;
 
 void shell::the_divius() {
     sh_name = "divius";
-    the_shell = x.login + "@t-fos>>";
+    the_shell = x.login + "@>";
     cout << "search the packet..." << endl;
     this_thread::sleep_for(chrono::seconds(2));
     cout << "sucees! packet downloads" << endl;

@@ -14,7 +14,7 @@ string input_log;
     //divius shell
     //1.>>
     cout << "1.for shell divius type 'sp-tf install divius-shell'" << endl;
-    cout << "-.shell: user@t-fos>>" << endl << endl;
+    cout << "-.shell: user@>" << endl << endl;
     //chsares-h shell
     //2.>>
     cout << "2.for shell chsares-h type 'sp-tf install chsares-h'" << endl;
